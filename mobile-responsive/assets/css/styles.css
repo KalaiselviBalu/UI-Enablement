@@ -1,0 +1,72 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --main-bg-color:#145f94;
+    --text-white : #fff;
+    --primary-border:#b2c9d9;
+}
+/** start of wrapper **/
+
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+}
+/** end of wrapper **/
+/** start of header **/
+.wrapper header {
+    background-color: var(--main-bg-color);
+    padding: 20px 0px;
+    height: 60px;
+    text-align: center;
+    color: var(--text-white);
+}
+/** end of header **/
+/** start of col-wrapper **/
+.wrapper .col-wrapper{
+    width: 90%;
+    margin: 50px auto;
+}
+/** end of col-wrapper **/
+/** start of left-col **/
+.wrapper .col-wrapper .left-col {
+    float: left;
+    width: calc(65% - 10px);
+    margin-right: 10px;
+}
+/** end of left-col **/
+/** start of right-col **/
+.wrapper .col-wrapper  .right-col {
+    float: right;
+    width: calc(34% - 10px);
+    margin-left: 10px;
+}
+/** end of right-col **/
+/** start of card **/
+.wrapper .col-wrapper .card {
+border: 2px solid var(--primary-border);
+margin: 0px 0px 15px;
+}
+/** end of card **/
+/** start of card-header **/
+.wrapper .col-wrapper .card .card-header{
+background-color: var(--main-bg-color);
+color: var(--text-white);
+padding: 1rem;
+}
+/** end of card-header **/
+/** start of card-body **/
+.wrapper .col-wrapper .card .card-body{
+    padding: 1rem;
+    text-align: justify;
+}
+/** end of card-body **/
+/** start of card-body p **/
+.wrapper .col-wrapper .card .card-body p {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 20px;
+}
+/** end of card-body p **/
+.wrapper .col-wrapper .clearfix {
+    clear: both;
+}
