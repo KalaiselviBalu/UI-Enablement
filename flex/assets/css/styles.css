@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+:root {
+    --primary-text-color:#4a90e2;
+    --secondary-text-color:#b8e986;
+
+}
+.text-right {
+    text-align: right;
+}
+.wrapper {
+    background-color: #000;
+    height: 100vh;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.text-white {
+    color: #fff;
+}
+.span-text-blue {
+    color: var(--primary-text-color);
+}
+.span-text-green {
+    color: var(--secondary-text-color);
+}
+.wrapper .screen-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro-section {
+    color: #fff;
+}
+.intro-section h1 {
+    font-size: 3.7em;
+}
+.intro-section .light {
+    font-family: 'Lato', sans-serif;
+}
+.intro-section .light span {
+    font-family: 'Merriweather', serif;
+}
+.caption-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.products-section {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+ .products-section img {
+    height: 10rem;
+    margin: 5px;
+}
+.logos-section {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
+}
+.logos-section img {
+    height: 20px;
+}
+.border {
+    height: 1px;
+    background: #fff;
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+.border::before{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    left: 0px;
+}
+.social-media-section ul{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.social-media-section ul li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    text-align: center;
+    line-height: 20px;
+}
+.social-media-section ul li a {
+    color: #fff;
+}
+.social-media-section ul li a .bx {
+    font-size: 13px;
+}
