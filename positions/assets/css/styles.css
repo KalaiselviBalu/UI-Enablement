@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root {
+    --primary-bg-color : #2a2b30;
+}
+/** Start of Global css**/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/** End of Global css**/
+
+/** Start of wrapper **/
+
+.wrapper{
+    font-family: 'Roboto', sans-serif;
+    padding: 5rem 7rem;
+    background-color: var(--primary-bg-color);
+}
+/** End of wrapper **/
+
+/** Start of header **/
+
+.wrapper .header {
+    margin-bottom: 20px;
+    position: relative;
+}
+/** End of header **/
+/** Start of profile-icon **/
+
+.profile-icon {
+    background: #d8d8d8;
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+/** End of profile-icon **/
+
+/** Start of profile-dropdown menu **/
+ .dropdown-menu {
+    display: none;
+    background-color: #eeeeee;
+    margin: 0.5rem 0rem;
+    position: absolute;
+    z-index: 10;
+    max-width: 200px;
+    right: 0px;
+    padding: 0.8rem;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+}
+/** End of profile-dropdown menu **/
+
+/** Start of profile-dropdown menu  :hover**/
+.profile-settings:hover .dropdown-menu {
+    display: block;
+}
+/** End of profile-dropdown menu :hover**/
+
+/** Start of profile-dropdown menu ul li**/
+.profile-settings .dropdown-menu ul li {
+    padding-bottom: 15px;
+}
+/** End of profile-dropdown menu ul li**/
+
+/** Start of profile-dropdown menu ul li a**/
+.profile-settings .dropdown-menu ul li a{
+color: #000;
+}
+/** End of profile-dropdown menu ul li a**/
+
+/** Start of product-wrapper **/
+.product-wrapper{
+display: grid;
+grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );  
+grid-template-rows: auto ;
+grid-gap: 50px;
+}
+
+/** End of product-wrapper **/
+
+/** Start of product-image **/
+
+.product .product-image {
+   padding: 5em 4em;
+    background-color: #24252a;
+    text-align: center;
+    position: relative;
+}
+/** End of product-image **/
+
+/** Start of product-image img tag **/
+
+.product .product-image img {
+    max-width: 100%;
+    height: 12em;
+}
+/** End of product-image img tag **/
+
+/** Start of product-details **/
+.product .product-footer .product-details {
+    margin: 15px 0px;
+}
+/** End of product-details **/
+
+/** Start of product-details product-title **/
+.product .product-footer .product-details .product-title{
+color: #fff;
+margin-bottom: 10px;
+}
+/** Start of product-details **/
+
+/** End of product-details  price**/
+.product .product-footer .product-details .product-price{
+    color: #9f9fa4;
+    margin-bottom: 10px;
+}
+/** Start of product-details price **/
+
+/** Start of product-details  btn **/
+.product .product-footer .product-details .btn{
+    padding: 10px 12px;
+    color: #9f9fa4;
+    background-color: transparent;
+    border: 1px solid #949494;
+}
+/** End of product-details btn **/
+
+/** Start of product-details product size **/
+.product .product-size{
+    background-color: #88b282;
+    color: #000;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 17px;
+  
+}
+/** End of product-details  products size**/
+
+/** Start of product-details isFavourite **/
+.isFavourite{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #88b282;
+    font-size: 20px;
+}
+/** End of product-details  isFavourite **/
+
+/** start of footer **/
+
+footer {
+    right: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    background: #000;
+    max-height: 70px;
+    height: 100%;
+}
+/** end of footer **/
+
+/** start of footer ul **/
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/** start of footer ul**/
+
+/** start of footer ul li a **/
+footer ul li a {
+    margin-right: 40px;
+    line-height: 70px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+/** end of footer ul li a**/
