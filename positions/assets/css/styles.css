@@ -89,6 +89,7 @@ display: grid;
 grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );  
 grid-template-rows: auto ;
 grid-gap: 50px;
+padding-bottom: 10rem;
 }
 
 /** End of product-wrapper **/
@@ -113,6 +114,7 @@ grid-gap: 50px;
 /** Start of product-details **/
 .product .product-footer .product-details {
     margin: 15px 0px;
+    position: relative;
 }
 /** End of product-details **/
 
@@ -150,9 +152,8 @@ margin-bottom: 10px;
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    bottom: -20px;
     right: 20px;
-    top: auto;
+    top: -35px;
     left: auto;
     line-height: 40px;
     font-weight: 600;
