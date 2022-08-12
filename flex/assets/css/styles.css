@@ -1,16 +1,16 @@
+/** Start of Fonts Links **/
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+/** Start of Fonts Links **/
+
 :root {
     --primary-text-color:#4a90e2;
     --secondary-text-color:#b8e986;
 
 }
+/** Start of Global Styles **/
 .text-right {
     text-align: right;
-}
-.wrapper {
-    background-color: #000;
-    height: 100vh;
 }
 ul {
     margin: 0;
@@ -26,54 +26,103 @@ ul {
 .span-text-green {
     color: var(--secondary-text-color);
 }
+/** End of Global Styles **/
+
+/**Start of wrapper **/
+.wrapper {
+    background-color: #000;
+    height: 100vh;
+}
+/** End of wrapper **/
+
+/** Start of screen wrapper **/
 .wrapper .screen-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    align-items: stretch;
     height: 100%;
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
-.intro-section {
+/** End of Screen Wrapper **/
+
+/*Start of email-text **/
+.wrapper .screen-wrapper .email-text {
+    font-size: 13px;
+}
+/** End of email text **/
+
+/** Start of intro section **/
+.wrapper .screen-wrapper .intro-section {
     color: #fff;
 }
-.intro-section h1 {
-    font-size: 3.7em;
+/** End of intro section **/
+
+/** Start of intro section h1 **/
+.wrapper .screen-wrapper .intro-section h1 {
+    font-size: 4em;
+    margin-bottom: 1rem;
 }
-.intro-section .light {
+/** End of intro section h1 **/
+
+/** Start of intro section light **/
+.wrapper .screen-wrapper .intro-section .light {
     font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
-.intro-section .light span {
+/** End of intro section light **/
+
+/** Start of intro section span **/
+.wrapper .screen-wrapper .intro-section .light span {
     font-family: 'Merriweather', serif;
 }
-.caption-text {
+/** End of intro section span **/
+
+/** Start of caption text **/
+.wrapper .screen-wrapper .caption-text {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 23px;
 }
-.products-section {
+/** End of caption text **/
+
+/** Start of products section **/
+.wrapper .screen-wrapper .products-section {
     display: flex;
     flex-flow: wrap;
     align-items: center;
     justify-content: center;
     width: 80%;
-    margin: 0 auto;
+    margin: 0em auto;
 }
- .products-section img {
+/**End of products section **/
+
+/** Start of products section img **/
+.wrapper .screen-wrapper .products-section img {
     height: 10rem;
     margin: 5px;
 }
-.logos-section {
+/** End of products section img **/
+
+/** Start of logos section **/
+.wrapper .screen-wrapper .logos-section {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
-    margin: 0 auto;
+    justify-content: space-evenly;
+    width: 65%;
+    margin: 0rem auto;
 }
-.logos-section img {
+/**End of logos section **/
+
+/** Start of logos section img **/
+.wrapper .screen-wrapper .logos-section img {
     height: 20px;
 }
-.border {
+/** End of logos section img **/
+
+/** Start of border **/
+.wrapper .screen-wrapper .border {
     height: 1px;
     background: #fff;
     width: 100px;
@@ -81,19 +130,30 @@ ul {
     margin: 0 auto;
     position: relative;
 }
-.border::before{
+/** End of border **/
+
+/** Start of border before **/
+.wrapper .screen-wrapper .border::before{
     position: absolute;
     content: "";
     height: 1px;
     background-color: #fff;
-    left: 0px;
+    left: -40px;
+    width: 15px;
+    top: 1px;
 }
-.social-media-section ul{
+/** End of border before **/
+
+/** Start of social media section ul  **/
+.wrapper .screen-wrapper .social-media-section ul{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-.social-media-section ul li {
+/** End of social media section ul **/
+
+/** Start of social media section ul li **/
+.wrapper .screen-wrapper .social-media-section ul li {
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -101,9 +161,77 @@ ul {
     text-align: center;
     line-height: 20px;
 }
-.social-media-section ul li a {
+/** End of social media section ul li **/
+
+/** Start of social media ul li a **/
+.wrapper .screen-wrapper .social-media-section ul li a {
     color: #fff;
 }
-.social-media-section ul li a .bx {
+/** End of social media ul li a **/
+
+/** Start of bx icon **/
+.wrapper .screen-wrapper .social-media-section ul li a .bx {
     font-size: 13px;
+}
+/** End of bx icon **/
+
+/** Start of small text **/
+.wrapper .screen-wrapper .small-text {
+    font-size: 10px;
+}
+/** End of small text **/
+
+@media (max-width:768px) {
+/**Start of wrapper **/
+.wrapper {
+    min-height: 130vh;
+    overflow: scroll;
+    height: auto;
+   
+}
+/** End of wrapper **/
+
+/*Start of email-text **/
+.wrapper .screen-wrapper .email-text {
+    font-size: 10px;
+}
+/** End of email text **/
+/** Start of intro section h1 **/
+.wrapper .screen-wrapper .intro-section h1 {
+    font-size: 1em;
+    margin-bottom: 0em;
+}
+/** End of intro section h1 **/
+
+/** Start of caption text **/
+.wrapper .screen-wrapper .caption-text {
+    font-size: 12px;
+}
+/** End of caption text **/
+
+/** Start of products section **/
+.wrapper .screen-wrapper .products-section {
+   flex-direction: column;
+   width: 100%;
+}
+/**End of products section **/
+/** Start of products section img **/
+.wrapper .screen-wrapper .products-section img {
+    height: 5rem;
+    margin: 5px 0px;
+}
+/** End of products section img **/
+/** Start of logos section **/
+.wrapper .screen-wrapper .logos-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+
+}
+/**End of logos section **/
+/** Start of logos section img **/
+.wrapper .screen-wrapper .logos-section img {
+    height: 10px;
+}
+
 }
