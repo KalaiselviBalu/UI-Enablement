@@ -9,9 +9,7 @@
 
 }
 /** Start of Global Styles **/
-.text-right {
-    text-align: right;
-}
+
 ul {
     margin: 0;
     padding: 0;
@@ -31,17 +29,11 @@ ul {
 /**Start of wrapper **/
 .wrapper {
     background-color: #000;
-    height: 100vh;
 }
 /** End of wrapper **/
 
 /** Start of screen wrapper **/
 .wrapper .screen-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
-    height: 100%;
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -51,19 +43,26 @@ ul {
 /*Start of email-text **/
 .wrapper .screen-wrapper .email-text {
     font-size: 13px;
+    position: absolute;
+    right: 15px;
+    left: auto;
+    top: 10px;
 }
 /** End of email text **/
 
 /** Start of intro section **/
 .wrapper .screen-wrapper .intro-section {
     color: #fff;
+    position: relative;
+    padding: 4rem 0rem;
+    width: 80%;
+    margin: 0 auto;
 }
 /** End of intro section **/
 
 /** Start of intro section h1 **/
 .wrapper .screen-wrapper .intro-section h1 {
-    font-size: 4em;
-    margin-bottom: 1rem;
+    font-size: 4rem;
 }
 /** End of intro section h1 **/
 
@@ -85,6 +84,7 @@ ul {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     font-size: 23px;
+    padding-bottom: 3rem;
 }
 /** End of caption text **/
 
@@ -92,17 +92,17 @@ ul {
 .wrapper .screen-wrapper .products-section {
     display: flex;
     flex-flow: wrap;
-    align-items: center;
     justify-content: center;
     width: 80%;
-    margin: 0em auto;
+    margin: 0 auto;
+    padding-bottom: 3rem;
 }
 /**End of products section **/
 
 /** Start of products section img **/
 .wrapper .screen-wrapper .products-section img {
     height: 10rem;
-    margin: 5px;
+    margin: 0.6rem;
 }
 /** End of products section img **/
 
@@ -112,6 +112,7 @@ ul {
     justify-content: space-evenly;
     width: 65%;
     margin: 0rem auto;
+    padding-bottom: 7rem;
 }
 /**End of logos section **/
 
@@ -121,26 +122,41 @@ ul {
 }
 /** End of logos section img **/
 
+/** Start of end section **/ 
+.wrapper .screen-wrapper .end-section {
+    width: 50%;
+    margin: 0 auto;
+}
+/** End of end section **/
+
 /** Start of border **/
-.wrapper .screen-wrapper .border {
+.wrapper .screen-wrapper .border{
+   
+    text-align: center;
+    margin: 0 auto;
+   
+}
+.line {
     height: 1px;
     background: #fff;
     width: 100px;
-    text-align: center;
-    margin: 0 auto;
     position: relative;
+    text-align: center;
+    margin: 0 auto 3rem auto;
+    padding: 0 2rem;
 }
 /** End of border **/
 
 /** Start of border before **/
-.wrapper .screen-wrapper .border::before{
+.wrapper .screen-wrapper .line::before{
     position: absolute;
     content: "";
+    left: -30px;
+    top: 0px;
     height: 1px;
     background-color: #fff;
-    left: -40px;
-    width: 15px;
-    top: 1px;
+    width: 20px;
+    margin-right: 20px;
 }
 /** End of border before **/
 
@@ -178,60 +194,73 @@ ul {
 /** Start of small text **/
 .wrapper .screen-wrapper .small-text {
     font-size: 10px;
+    padding: 3rem 0rem;
 }
 /** End of small text **/
 
 @media (max-width:768px) {
-/**Start of wrapper **/
-.wrapper {
-    min-height: 130vh;
-    overflow: scroll;
-    height: auto;
-   
-}
-/** End of wrapper **/
-
 /*Start of email-text **/
 .wrapper .screen-wrapper .email-text {
-    font-size: 10px;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
 }
 /** End of email text **/
 /** Start of intro section h1 **/
 .wrapper .screen-wrapper .intro-section h1 {
-    font-size: 1em;
-    margin-bottom: 0em;
+    font-size: 1.5rem;
 }
 /** End of intro section h1 **/
 
+/** Start of intro section **/
+.wrapper .screen-wrapper .intro-section {
+    padding: 2rem 0rem;
+    width: 100%;
+}
+/** End of intro section **/
+/** Start of intro section h1 **/
+.wrapper .screen-wrapper .intro-section h1 {
+    font-size: 1.5rem;
+}
 /** Start of caption text **/
 .wrapper .screen-wrapper .caption-text {
-    font-size: 12px;
+    font-size: 15px;
+    padding-bottom: 0.4rem;
 }
 /** End of caption text **/
 
-/** Start of products section **/
-.wrapper .screen-wrapper .products-section {
-   flex-direction: column;
-   width: 100%;
-}
-/**End of products section **/
-/** Start of products section img **/
-.wrapper .screen-wrapper .products-section img {
-    height: 5rem;
-    margin: 5px 0px;
-}
-/** End of products section img **/
 /** Start of logos section **/
 .wrapper .screen-wrapper .logos-section {
     display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-
+    justify-content: space-between;
+    width: 70%;
+    flex-flow: wrap;
+    margin: 1rem auto;
+    padding-bottom: 1.5rem;
+    align-items: center;
 }
 /**End of logos section **/
+
 /** Start of logos section img **/
 .wrapper .screen-wrapper .logos-section img {
-    height: 10px;
+    height: 25px;
+    padding: 4px;
+    margin-bottom: 35px;
+    object-fit: cover;
+}
+/** End of logos section img **/
+
+
+.wrapper .screen-wrapper .logos-section img:nth-child(4) {
+    height: 25px;
+    padding: 0.5rem;
 }
 
+/** Start of end section **/ 
+.wrapper .screen-wrapper .end-section {
+    width: 100%;
+    margin: 0 auto;
+}
+/** End of end section **/
 }
