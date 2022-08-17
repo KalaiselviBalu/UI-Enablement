@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+/** Start of global styles **/
+
+.text-white {
+    color: #fff;
+}
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.heading {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;  
+}
+.m-15{
+    margin-bottom: 15px;
+}
+.p-text {
+    font-family: 'Open Sans', sans-serif;
+    color: #222222;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 25px;
+    font-weight: 400;
+}
+/**End of global text **/
+
+/** Start of wrapper **/
+
+.wrapper{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #F5F5F5;
+}
+/** End of wrapper **/
+
+/** Start of container **/
+
+.wrapper .container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+/** End of container **/
+
+/** Start of header **/
+.wrapper header {
+    background-color: #fff;
+    padding: 1.3rem 0rem;
+    box-shadow: 0px 3px 6px #00000029;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+/** End of header **/
+
+/** Start of user details p **/
+.wrapper header .user-details p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: 10px;
+}
+/** End of user details p **/
+
+/** Start of user icon **/
+.wrapper header .user-icon {
+    background: url("/assets/images/reviewers/andy.png") center no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    border-radius: 50%;
+}
+/** End of user icon **/
+
+/** Start of content wrapper **/
+
+.wrapper .content-wrapper{
+    background-color: #F5F5F5;
+    margin:1rem auto 3.5rem;
+}
+/** End of content wrapper **/
+
+/** Start of left content **/
+.wrapper .content-wrapper .left-content {
+    width: calc(75% - 20px);
+    margin-right: 20px;
+    float: left;
+}
+/** End of left content **/
+
+/** Start of video section **/
+.wrapper .content-wrapper .left-content .video-section {
+    padding: 1rem 0rem;
+}
+/** End of video section **/
+
+/** Start of left content video **/
+.wrapper .content-wrapper .left-content video{
+    width: 100%;
+  height:25em;
+}
+/** End of left content video **/
+
+/** Start of hero title **/
+.wrapper .content-wrapper .left-content .video-section .hero-title {
+    color: #222222;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+/** End of hero title **/
+
+/** Start of video section p **/
+.wrapper .content-wrapper .left-content .video-section p {
+   margin-bottom: 15px;
+}
+/** End of video section p **/
+
+/** Start of comment **/
+.wrapper .content-wrapper .left-content .comment-section .comment  {
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+/** End of comment **/
+
+/** Start of comment img **/
+.wrapper .content-wrapper .left-content .comment-section .comment img {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+object-fit: cover;
+}
+/** End of comment img **/
+
+/** Start of comment h5**/
+.wrapper .content-wrapper .left-content .comment-section .comment h5{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+/** End of comment h5 **/
+
+/** Start of review details **/
+.wrapper .content-wrapper .left-content .comment-section .comment .review-details{
+    padding-left: 20px;
+ }
+ /** End of review details **/
+
+ /** Start of comment p **/
+ .wrapper .content-wrapper .left-content .comment-section .comment p {
+    margin: 5px 0px;    
+}
+/** End of comment p **/
+/** Start of right content **/
+.wrapper .content-wrapper  .right-content{
+    float: left;
+    width: calc(24% - 10px);
+    margin-left: 10px;
+}
+/** End of right content **/
+/** Start of poster wrapper img **/
+.wrapper .content-wrapper .right-content .poster-wrapper img {
+    height: 23em;
+    margin: 8px 0px;
+}
+/** End of poster wrapper img **/
+/** Start of clearfix **/
+.clearfix{
+    clear: both;
+}
+/** End of clearfix **/
+/** Start of footer **/
+.footer {
+    background-color: #222222;
+    padding: 1.5rem 0rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+}
+/** End of footer **/
+/** Start of chat box **/
+.chat-box{
+    background-color: #C432AE;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 10%;
+    right: 5%;
+}
+/** End of chat box **/
+.chat-box .bx {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+}
+
+@media (max-width:768px) {
+/** Start of global styles **/
+.flex-sm-column {
+    flex-direction: column;
+}
+.d-none-sm{
+    display: none;
+}
+.p-text {
+    font-size: 12px;
+    line-height: 20px;
+}
+.heading {
+   font-size: 14px;
+}
+/** End of global styles **/
+
+/** Start of container **/
+.wrapper .container {
+    max-width: 100%;
+}
+/** End of container **/
+
+
+/** Start of header **/
+.wrapper header {
+    padding: 1.3rem 1rem;
+}
+/** End of header **/
+
+/** Start of content wrapper **/
+
+.wrapper .content-wrapper{
+  
+    margin:1rem 1rem 3.5rem;
+}
+/** End of content wrapper **/
+
+/** Start of left content **/
+.wrapper .content-wrapper .left-content {
+    width: 100%;
+    margin-right: 0px;
+    float: none;
+}
+/** End of left content **/
+
+/** Start of left content video **/
+.wrapper .content-wrapper .left-content video{
+  height: 10em;
+}
+/** End of left content video **/
+
+/** Start of hero title **/
+.wrapper .content-wrapper .left-content .video-section .hero-title {
+    margin: 10px 0px;
+}
+/** End of hero title **/
+
+/** Start of comment h5**/
+.wrapper .content-wrapper .left-content .comment-section .comment h5{
+    font-size: 13px;
+}
+/** End of comment h5 **/
+
+ /** Start of comment p **/
+ .wrapper .content-wrapper .left-content .comment-section .comment p {
+  font-size: 12px;
+}
+/** End of comment p **/
+
+/** Start of right content **/
+.wrapper .content-wrapper  .right-content{
+    float: none;
+    width: 100%;
+    margin-left: 0px;
+}
+/** End of right content **/
+
+/** Start of poster wrapper img **/
+.wrapper .content-wrapper .right-content .poster-wrapper img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+  
+}
+/** End of poster wrapper img **/
+
+footer h5:nth-child(1) {
+    font-size: 11px;
+}
+footer h5:nth-child(2) {
+    font-size: 17px;
+}
+}
