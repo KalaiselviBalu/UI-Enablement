@@ -6000,29 +6000,3 @@ let data =
    "img": "http://dummyimage.com/140x111.jpg/5fa2dd/ffffff"
 }
 ]
-
-var container = document.getElementById("container");
-
-displayFriends();
-
-function displayFriends() {
-for(let i = 0 ;i < data.length; i++){
-    var item = document.createElement("div");
-    var image = document.createElement("img");
-    var content = document.createElement("div");
-    var name = document.createElement("h3");
-    var email = document.createElement("p");
-    image.src = data[i].img;
-    name.textContent = data[i].first_name + " " +data[i].last_name;
-    email.textContent = data[i].email;
-    item.classList.add("item");
-
-    item.appendChild(image);
-    content.appendChild(name);
-    content.appendChild(email);
-    item.appendChild(content);
-    container.appendChild(item);
-}
-
-
-}
