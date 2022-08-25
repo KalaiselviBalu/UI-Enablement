@@ -1,158 +1,163 @@
-@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+@use "variables/variables" as *;
+@use "mixins/mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 
+/** Start of wrapper **/
+.wrapper{
+    font-family: 'Roboto', sans-serif;
+    background-color: $primary-bg-color;
 
-/** Start of Global css**/
-:root {
-	--primary-bg-color: #2a2b30;
-}
-ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-a {
-	text-decoration: none;
-}
-.flex-between {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-/** End of Global css**/
+    /** Start of container **/
+    .container {
+        width: 90%;
+        margin:  0 auto;
 
-/** Start of Mixin : primary btn **/
-@mixin primaryBtn {
-    .btn {
-        padding: 10px 12px;
-        color: #9f9fa4;
-        background-color: transparent;
-        border: 1px solid #949494;
-        cursor: pointer;
-    }
-}
-/** End of Mixin : primary btn **/
+            /** Start of header **/
+            .header {
+                padding: 3.125rem 0px;
+                @include flex-between();
 
-/** Start of Mixin : Dropdown **/
-@mixin dropdownMenu {
-      /** Start of profile-dropdown menu **/
-      .dropdown-menu {
-        display: none;
-        background-color: #eeeeee;
-        margin: 0.5rem 0rem;
-        position: absolute;
-        z-index: 10;
-        left: auto;
-        right: 50px;
-        padding: 0.8rem;
-        width: 200px;
-        font-size: 13px;
-        font-weight: 600;
-      
-            li {
-                padding-bottom: 15px;
-                /** Start of profile-dropdown menu ul li a**/
-                a {
-                    color: #000;
+                .profile-settings {
+
+                    /** Start of profile-icon **/
+                        .profile-icon {
+                            background: $bg-light;
+                            @include rounded-circle();
+                            cursor: pointer;
+                        }
+                    /** End of profile-icon **/
+
+                    /** Start of profile-dropdown menu **/
+                    .dropdown-menu {
+                        display: none;
+                        background-color: #eeeeee;
+                        margin: $my-0_5 0rem;
+                        position: absolute;
+                        z-index: 10;
+                        left: auto;
+                        right: 3.125rem;
+                        padding: $p-1rem;
+                        width: 200px;
+                        font-size: $font-small;
+                        font-weight: $font-semibold;
+                    }
+                    /** End of profile-dropdown menu **/
+
+                    /** Start of profile-dropdown menu  :hover**/
+                        &:hover .dropdown-menu {
+                            display: block;
+
+                            ul {
+                                li {
+                                    padding-bottom: $p-1rem;
+                    
+                                    /** Start of profile-dropdown menu ul li a**/
+                                        a{
+                                        color: $text-dark;
+                                        }
+                                    /** End of profile-dropdown menu ul li a**/
+                    
+                                }
+                                /** End of profile-dropdown menu ul li **/
+                            }
+                        }
+                    /** End of profile-dropdown menu :hover**/
+
                 }
-                /** End of profile-dropdown menu ul li a**/
+                /** Start of profile-dropdown menu ul li**/
             }
-         
-    }
-/** End of profile-dropdown menu **/
-}
-/** End of Mixin : Dropdown **/
+            /** End of header **/
 
-/** Start of Mixin : Product **/
-@mixin product {
-   
-        /** Start of isFavourite **/
-        .isFavourite {
-            text-align: right;
-            z-index: 10;
-            color: #88b282;
-            font-size: 20px;
-            margin: 0px 20px -40px;
-            cursor: pointer;
-        }
-        /** End of isFavourite **/
+            /** Start of product-wrapper **/
+            .product-wrapper{         
+            @include grid-container(300px , auto , 3.125rem);
+            padding-bottom: 10rem;
+            
+            /** Start of product **/
+                .product {  
+                    /** Start of product-image **/
+                    .product-image {
+                        padding: 5rem;
+                        background-color: $prod-bg-image;
+                        text-align: center;
+            
+                        /** Start of product-image img tag **/
+                        img {
+                            max-width: 100%;
+                            height: 12rem;
+                        }
+                        /** End of product-image img tag **/
+                    }
+                    /** End of product-image **/
+            
+                    /** Start of product-details **/
+                    .product-footer .product-details {
+                        margin: $m-1rem 0rem;
+                        position: relative;
+                    
+                       /** Start of product-details product size **/
+                      .product-size{
+                        background-color: $text-green;
+                        color: $text-dark;
+                        @include rounded-circle();
+                        text-align: center;
+                        vertical-align: middle;
+                        position: absolute;
+                        right: 1.25rem;
+                        top: -3rem;
+                        left: auto;                    
+                        font-weight: $font-semibold;
+                        font-size: $font-small;
+                    
+                    }
+                    /** End of product-details  products size**/
 
-        /** Start of product-image **/
-        .product-image {
-            padding: 5em 4em;
-            background-color: #24252a;
-            text-align: center;
-
-            /** Start of product-image img **/
-            img {
-                max-width: 100%;
-                height: 12em;
+                    /** Start of product-details product-title **/
+                    .product-title{
+                            color: $text-white;
+                            margin-bottom: $mb-1rem;
+                    }
+                    /** Start of product-details product-title **/
+            
+                    /** End of product-details  price**/
+                        .product-price{
+                            color: $text-light;
+                            margin-bottom: $mb-1rem ;
+                        }
+                    /** Start of product-details price **/
+            
+                    /** Start of product-details  btn **/
+                    .btn{
+                           @include btn-md($text-white);
+                            background-color: transparent;
+                          padding: $btn-md-padding;
+                          border: 1px solid $border-light;
+                        }
+                    /** End of product-details btn **/ 
+                    }
+                    /** End of product-details **/
+            
+                    /** Start of product-details isFavourite **/
+                        .isFavourite{
+                            text-align: right;
+                            z-index: 10;
+                            color: $text-green;
+                            font-size: $font-medium;
+                            margin: 0px 1.25rem -2.5rem;
+                            cursor: pointer;
+                        }
+                    /** End of product-details  isFavourite **/        
+                
+                }
+                /** End of product **/
             }
-            /** End of product-image img **/
-        }
-        /** End of product-image **/
-       
-            /** Start of product-details **/
-            .product-details {
-                margin: 15px 0px;
-                position: relative;
-                /** Start of product-title **/
-                .product-title {
-                    color: #fff;
-                    margin-bottom: 10px;
-                }
-                /** End of product-title **/
-
-                /** Start of product-details  price**/
-                .product-price {
-                    color: #9f9fa4;
-                    margin-bottom: 10px;
-                }
-                /** End of product-details price **/
-
-                /** Start of Mixin : Primary btn **/
-
-                  @include primaryBtn();
-                 /** End of Mixin : Primary btn **/
-
-
-                /** Start of product size **/
-                .product-size {
-                    background-color: #88b282;
-                    color: #000;
-                    height: 40px;
-                    width: 40px;
-                    border-radius: 100%;
-                    text-align: center;
-                    vertical-align: middle;
-                    position: absolute;
-                    right: 20px;
-                    top: -35px;
-                    left: auto;
-                    line-height: 40px;
-                    font-weight: 600;
-                    font-size: 17px;
-                }
-                /** End of products size**/
-            }
-            /** End of product-details **/
-  }
-/** End of Mixin : Product **/
-
-/** Start of Mixin : Header **/
-@mixin header {
-  /** Start of header **/
-  .header {
-    padding: 50px 0px;
-}
-/** End of header **/ 
-}
-/** End of Mixin : Header **/
-
-/** Start of Mixin : Footer **/
-    @mixin  footer {
-        /** start of footer **/
+            /** End of product-wrapper **/
+            
+            /** start of footer **/
             footer {
                 right: 0px;
                 left: 0px;
@@ -160,93 +165,37 @@ a {
                 width: 100%;
                 bottom: 0px;
                 top: auto;
-                background: #000;
+                background: $text-dark;
                 max-height: 80px;
                 height: 100%;
+            
                 /** start of footer ul **/
                 ul {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                   @include flex-center();
                     gap: 40px;
-                    li {
-                        line-height: 80px;
-                    /** start of footer ul li a **/
-                    a {
-                        color: #fff;
-                        font-weight: 600;
-                        font-size: 20px;
-                    }
-                    /** end of footer ul li a**/
-                        
-                    }
-                }
-                /** start of footer ul**/
-            }
-        /** end of footer **/ 
-    }
-/** End of Mixin : Footer **/
+                        /** start of footer ul**/
+                      li {
+                            line-height: 80px;
 
-/** Start of wrapper **/
-.wrapper {
-	font-family: 'Roboto', sans-serif;
-	background-color: var(--primary-bg-color);
-	/** Start of container **/
-    .container {
-        width: 90%;
-        margin: 0 auto;
-         /** Start of include header **/
-             @include header(); 
-        /** End of include header **/
-      
-        .profile-settings:hover {
-           
-                .dropdown-menu {
-                    display: block;
+                             /** start of footer ul li a **/
+                       a {
+                        color: $text-white;
+                        font-weight: $font-semibold;
+                        font-size: $font-medium;
+                        }
+                        /** end of footer ul li a**/
+                        }
+                        /** end of footer ul**/
                 }
-           
-            /** End of profile-dropdown menu :hover**/
-
-            /** Start of profile-icon **/
-            .profile-icon {
-                background: #d8d8d8;
-                height: 45px;
-                width: 45px;
-                border-radius: 100%;
-                cursor: pointer;
-            }
-            /** End of profile-icon **/
+                       
             
-            /** Start of include Dropdown **/
-                @include dropdownMenu()
-            /** End of include Dropdown **/
-        }
-     
-        /** Start of product-wrapper **/
-        .product-wrapper {
-            display: grid;
-            grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
-            grid-template-rows: auto;
-            grid-gap: 50px;
-            padding-bottom: 10rem;
-        
-        /** Start of include product **/
-         @include product () ;
-          /** End of include product **/
-        }
-        /** End of product-wrapper **/
-
-         /** Start of include footer **/
-         @include footer(); 
-         /** End of include footer **/
+            }
+            /** end of footer **/
     }
     /** End of container **/
 }
 /** End of wrapper **/
 
-
-
- 
 
 
 

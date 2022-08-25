@@ -1,0 +1,35 @@
+
+@mixin flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@mixin  flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin grid-container($grid-col-value , $grid-row-value , $grid-gap) {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax($grid-col-value , 1fr));  
+    grid-template-rows: $grid-row-value;
+    grid-gap: $grid-gap;
+}
+
+/** Start of Mixin : primary btn **/
+@mixin btn-md($text-color) {
+        box-shadow: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $text-color;
+}
+/** End of Mixin : primary btn **/
+
+@mixin  rounded-circle {
+	height: 45px;
+	width: 45px;
+	border-radius: 100%;
+	line-height: 45px;
+}
