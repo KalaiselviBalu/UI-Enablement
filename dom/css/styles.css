@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+/** Start of container **/
+.wrapper .header{
+    background-color: #3b1c67;
+    min-height: 70px;
+    padding: 1.8rem;
+    font-family: 'Open Sans', sans-serif;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+/**Start of header h3 **/
+.wrapper .header h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+/**End of header h3 **/
+
+/**Start of container **/
+.wrapper .container {
+display: grid;
+grid-template-columns: auto auto auto;
+grid-gap: 15px;
+width: 90%;
+margin: 0 auto;
+padding: 3.5rem 0rem;
+}
+/**End of container **/
+
+/**Start of item**/
+.wrapper .item {
+    background-color: #4d66b4;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+/* End of  item**/
+
+/** Start of h3 **/
+.wrapper .item h3{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+/** End of h3 **/
+
+/** Start of item img **/
+
+.wrapper .item img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+}
+/** End of item img **/
+
+/** Start of item p **/
+.wrapper .item p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+/** End of item p **/
