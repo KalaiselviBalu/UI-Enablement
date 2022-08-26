@@ -1,5 +1,5 @@
 
-//Method 1
+
 const calculator = {
 add : function(num1 , num2){
     this.num1 = num1;
@@ -23,7 +23,7 @@ division : function(num1 , num2){
 }
 }
 
-const calcObj = new calculator.division(2,2);
+const calcObj = new calculator.division(6,2);
 
 
 
