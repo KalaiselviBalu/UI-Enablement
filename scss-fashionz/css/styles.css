@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/** Start of Mixin : primary btn **/
+/** End of Mixin : primary btn **/
+/** Start of wrapper **/
+.wrapper {
+  font-family: "Roboto", sans-serif;
+  background-color: #2a2b30;
+  /** Start of container **/
+  /** End of container **/
+}
+.wrapper .container {
+  width: 90%;
+  margin: 0 auto;
+  /** Start of header **/
+  /** End of header **/
+  /** Start of product-wrapper **/
+  /** End of product-wrapper **/
+  /** start of footer **/
+  /** end of footer **/
+}
+.wrapper .container .header {
+  padding: 3.125rem 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /** Start of profile-dropdown menu ul li**/
+}
+.wrapper .container .header .profile-settings {
+  /** Start of profile-icon **/
+  /** End of profile-icon **/
+  /** Start of profile-dropdown menu **/
+  /** End of profile-dropdown menu **/
+  /** Start of profile-dropdown menu  :hover**/
+  /** End of profile-dropdown menu :hover**/
+}
+.wrapper .container .header .profile-settings .profile-icon {
+  background: #d8d8d8;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  line-height: 45px;
+  cursor: pointer;
+}
+.wrapper .container .header .profile-settings .dropdown-menu {
+  display: none;
+  background-color: #eeeeee;
+  margin: 0.5rem 0rem;
+  position: absolute;
+  z-index: 10;
+  left: auto;
+  right: 3.125rem;
+  padding: 1rem;
+  width: 200px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.wrapper .container .header .profile-settings:hover .dropdown-menu {
+  display: block;
+}
+.wrapper .container .header .profile-settings:hover .dropdown-menu ul {
+  /** End of profile-dropdown menu ul li **/
+}
+.wrapper .container .header .profile-settings:hover .dropdown-menu ul li {
+  padding-bottom: 1rem;
+  /** Start of profile-dropdown menu ul li a**/
+  /** End of profile-dropdown menu ul li a**/
+}
+.wrapper .container .header .profile-settings:hover .dropdown-menu ul li a {
+  color: #000;
+}
+.wrapper .container .product-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 3.125rem;
+  padding-bottom: 10rem;
+  /** Start of product **/
+  /** End of product **/
+}
+.wrapper .container .product-wrapper .product {
+  /** Start of product-image **/
+  /** End of product-image **/
+  /** Start of product-details **/
+  /** End of product-details **/
+  /** Start of product-details isFavourite **/
+  /** End of product-details  isFavourite **/
+}
+.wrapper .container .product-wrapper .product .product-image {
+  padding: 5rem;
+  background-color: #24252a;
+  text-align: center;
+  /** Start of product-image img tag **/
+  /** End of product-image img tag **/
+}
+.wrapper .container .product-wrapper .product .product-image img {
+  max-width: 100%;
+  height: 12rem;
+}
+.wrapper .container .product-wrapper .product .product-footer .product-details {
+  margin: 1rem 0rem;
+  position: relative;
+  /** Start of product-details product size **/
+  /** End of product-details  products size**/
+  /** Start of product-details product-title **/
+  /** Start of product-details product-title **/
+  /** End of product-details  price**/
+  /** Start of product-details price **/
+  /** Start of product-details  btn **/
+  /** End of product-details btn **/
+}
+.wrapper .container .product-wrapper .product .product-footer .product-details .product-size {
+  background-color: #88b282;
+  color: #000;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  line-height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 1.25rem;
+  top: -3rem;
+  left: auto;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.wrapper .container .product-wrapper .product .product-footer .product-details .product-title {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.wrapper .container .product-wrapper .product .product-footer .product-details .product-price {
+  color: #949494;
+  margin-bottom: 1rem;
+}
+.wrapper .container .product-wrapper .product .product-footer .product-details .btn {
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.75rem;
+  border: 1px solid #949494;
+}
+.wrapper .container .product-wrapper .product .isFavourite {
+  text-align: right;
+  z-index: 10;
+  color: #88b282;
+  font-size: 1.25rem;
+  margin: 0px 1.25rem -2.5rem;
+  cursor: pointer;
+}
+.wrapper .container footer {
+  right: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  top: auto;
+  background: #000;
+  max-height: 80px;
+  height: 100%;
+  /** start of footer ul **/
+}
+.wrapper .container footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  /** start of footer ul**/
+  /** end of footer ul**/
+}
+.wrapper .container footer ul li {
+  line-height: 80px;
+  /** start of footer ul li a **/
+  /** end of footer ul li a**/
+}
+.wrapper .container footer ul li a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+/** End of wrapper **//*# sourceMappingURL=styles.css.map */

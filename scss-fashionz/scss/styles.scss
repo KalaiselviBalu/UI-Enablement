@@ -1,0 +1,204 @@
+
+@use "variables/variables" as *;
+@use "mixins/mixins" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+/** Start of wrapper **/
+.wrapper{
+    font-family: 'Roboto', sans-serif;
+    background-color: $primary-bg-color;
+
+    /** Start of container **/
+    .container {
+        width: 90%;
+        margin:  0 auto;
+
+            /** Start of header **/
+            .header {
+                padding: 3.125rem 0px;
+                @include flex-between();
+
+                .profile-settings {
+
+                    /** Start of profile-icon **/
+                        .profile-icon {
+                            background: $bg-light;
+                            @include rounded-circle();
+                            cursor: pointer;
+                        }
+                    /** End of profile-icon **/
+
+                    /** Start of profile-dropdown menu **/
+                    .dropdown-menu {
+                        display: none;
+                        background-color: #eeeeee;
+                        margin: $my-0_5 0rem;
+                        position: absolute;
+                        z-index: 10;
+                        left: auto;
+                        right: 3.125rem;
+                        padding: $p-1rem;
+                        width: 200px;
+                        font-size: $font-small;
+                        font-weight: $font-semibold;
+                    }
+                    /** End of profile-dropdown menu **/
+
+                    /** Start of profile-dropdown menu  :hover**/
+                        &:hover .dropdown-menu {
+                            display: block;
+
+                            ul {
+                                li {
+                                    padding-bottom: $p-1rem;
+                    
+                                    /** Start of profile-dropdown menu ul li a**/
+                                        a{
+                                        color: $text-dark;
+                                        }
+                                    /** End of profile-dropdown menu ul li a**/
+                    
+                                }
+                                /** End of profile-dropdown menu ul li **/
+                            }
+                        }
+                    /** End of profile-dropdown menu :hover**/
+
+                }
+                /** Start of profile-dropdown menu ul li**/
+            }
+            /** End of header **/
+
+            /** Start of product-wrapper **/
+            .product-wrapper{         
+            @include grid-container(300px , auto , 3.125rem);
+            padding-bottom: 10rem;
+            
+            /** Start of product **/
+                .product {  
+                    /** Start of product-image **/
+                    .product-image {
+                        padding: 5rem;
+                        background-color: $prod-bg-image;
+                        text-align: center;
+            
+                        /** Start of product-image img tag **/
+                        img {
+                            max-width: 100%;
+                            height: 12rem;
+                        }
+                        /** End of product-image img tag **/
+                    }
+                    /** End of product-image **/
+            
+                    /** Start of product-details **/
+                    .product-footer .product-details {
+                        margin: $m-1rem 0rem;
+                        position: relative;
+                    
+                       /** Start of product-details product size **/
+                      .product-size{
+                        background-color: $text-green;
+                        color: $text-dark;
+                        @include rounded-circle();
+                        text-align: center;
+                        vertical-align: middle;
+                        position: absolute;
+                        right: 1.25rem;
+                        top: -3rem;
+                        left: auto;                    
+                        font-weight: $font-semibold;
+                        font-size: $font-small;
+                    
+                    }
+                    /** End of product-details  products size**/
+
+                    /** Start of product-details product-title **/
+                    .product-title{
+                            color: $text-white;
+                            margin-bottom: $mb-1rem;
+                    }
+                    /** Start of product-details product-title **/
+            
+                    /** End of product-details  price**/
+                        .product-price{
+                            color: $text-light;
+                            margin-bottom: $mb-1rem ;
+                        }
+                    /** Start of product-details price **/
+            
+                    /** Start of product-details  btn **/
+                    .btn{
+                           @include btn-md($text-white);
+                            background-color: transparent;
+                          padding: $btn-md-padding;
+                          border: 1px solid $border-light;
+                        }
+                    /** End of product-details btn **/ 
+                    }
+                    /** End of product-details **/
+            
+                    /** Start of product-details isFavourite **/
+                        .isFavourite{
+                            text-align: right;
+                            z-index: 10;
+                            color: $text-green;
+                            font-size: $font-medium;
+                            margin: 0px 1.25rem -2.5rem;
+                            cursor: pointer;
+                        }
+                    /** End of product-details  isFavourite **/        
+                
+                }
+                /** End of product **/
+            }
+            /** End of product-wrapper **/
+            
+            /** start of footer **/
+            footer {
+                right: 0px;
+                left: 0px;
+                position: fixed;
+                width: 100%;
+                bottom: 0px;
+                top: auto;
+                background: $text-dark;
+                max-height: 80px;
+                height: 100%;
+            
+                /** start of footer ul **/
+                ul {
+                   @include flex-center();
+                    gap: 40px;
+                        /** start of footer ul**/
+                      li {
+                            line-height: 80px;
+
+                             /** start of footer ul li a **/
+                       a {
+                        color: $text-white;
+                        font-weight: $font-semibold;
+                        font-size: $font-medium;
+                        }
+                        /** end of footer ul li a**/
+                        }
+                        /** end of footer ul**/
+                }
+                       
+            
+            }
+            /** end of footer **/
+    }
+    /** End of container **/
+}
+/** End of wrapper **/
+
+
+
+
+
+
+
