@@ -1,0 +1,240 @@
+
+@use "fonts/fonts" as *;
+@use "variables/variables" as *;
+@use "mixins/mixins" as *;
+
+/** Start of Global styles **/
+body{
+    height: 100vh;
+}
+.btn-danger{
+    background-color: $color-red;
+}
+.btn-light{
+    background-color: $color-light;
+}
+.text-white{
+    color: $text-white;
+}
+.text-dark{
+    color: $text-black;
+}
+/** End of Global styles **/
+
+/** Start of wrapper **/
+.wrapper {
+   
+    /** Start of overlay **/
+    &.overlay {
+        background: rgba(0,0,0,0.4);
+     
+        position: relative;
+        height: 100%;
+    }
+     /** End of overlay **/
+
+    /** Start of header **/
+    header{
+        background-color: $color-red;
+        /** Start of container **/
+         .container {
+            padding: $container-padding;
+            @include flex-between();
+
+            h3 {
+                font-size: $h3;
+                color: $text-white;
+                font-family: "SemiBold";
+                letter-spacing: 2px;
+            }
+             /** Start of view selection **/
+            .view-selection{
+                display: flex;
+                align-items: center;
+
+                p{
+                    color: $text-white;
+                    font-family: "SemiBold";
+                    font-size: 1.2rem;
+                    padding-right: 2rem;
+                }
+                select {
+                    padding: 0.8rem;
+                    width: 260px;
+                    font-size: 1.2rem;
+                    font-family: "Regular";
+                    color: $text-black;
+
+                    
+                }
+            }
+             /** End of view selection **/
+         }
+          /** End of container **/
+     }
+    /** End of header **/
+
+     /** Start of notes-wrapper **/
+     .notes-wrapper {
+            margin : 2rem 0rem;
+            /** Start of container **/
+            .container{
+                padding: $container-padding;
+                @include grid-container(5 , auto , 1.5rem);
+                /** Start of note **/
+                .note{
+                    background-color: $color-light-green;
+                    /** Start of note-header **/
+                      .note-header{
+                         padding: 1rem;
+                          font-size: 1rem;
+                          font-family: "Light";
+                          background-color: $color-dark-green;
+                          
+                          h2{
+                              @include para-truncate();
+                          }
+                      }
+                      /** End of note-header **/
+
+                      /** Start of note-body **/
+                      .note-body{
+                          padding: 1rem;
+                          height: 270px;
+                          overflow: auto;
+                         
+                          p{
+                              font-family: "Light";
+                              font-size: 0.9rem;
+                              word-spacing: 2px;
+                              line-height: 20px;
+                              text-align: justify;
+                             
+                          }
+                      }
+                      /** End of note-body **/
+
+                      /** Start of note-footer **/
+                      .note-footer{
+                          padding: 1rem;
+                          @include flex-between();
+                          p{
+                              font-size: 0.6rem;
+                              font-family: "SemiBold";
+                              text-transform: uppercase;
+                          }
+                          button {
+                              background-color: transparent;
+                              border: none;
+                              outline: none;
+                              box-shadow: none;
+                              .fa {
+                                  font-size: 0.9rem;
+                                  color: rgb(85, 83, 83);
+                              }
+                          }
+                      }
+                       /** End of note-footer **/
+                       
+                       /** Start of add note **/
+                      &.addNote{
+                          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+                          @include flex-center();
+                          background-color: transparent;
+
+                          /** Start of note btn **/
+                          .addNoteBtn{
+                              background: $color-red;
+                              padding: 2rem;
+                              border-radius: 100%;
+                              border: none;
+                              outline: none;
+                              box-shadow: none;
+          
+                              .fa {
+                                  font-size: 2.5rem;
+                                  color: $text-white;
+                              }
+                          }
+                          /** End of note btn **/
+                      }
+                        /** End of add note **/
+                  }
+            }
+            /** End of container **/
+     }
+     /** End of notes-wrapper **/
+
+     /** Start of modal **/
+     .modal {
+        position: absolute;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: 10;
+        padding: 1.5rem 2rem;
+        width: 40%;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+        /** Start of modal-header **/
+        .modal-header{
+            text-align: center;
+            padding: 1rem;
+            h4 {
+                font-family: "SemiBold";
+                font-size: $h4;
+            }
+        }
+         /** End of modal-header **/
+
+        /** Start of modal-body **/
+        .modal-body {
+            /** Start of input item **/
+            .input-item {
+                display: block;
+                width: 100%;
+                border: 1px solid #000;
+                padding: 1.5rem;
+                margin-bottom: 1.2rem;
+                font-size: 1.2rem;
+                font-family: "Regular";
+            }   
+            /** End of input item **/
+
+            /** Start of input group **/
+            .input-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1.2rem;
+                label {
+                    font-size: 1.1rem;
+                    font-family: "Regular";
+                    margin-right: 1.4rem;
+                }  
+                input[type="checkbox"]{
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 0.6rem;
+                }
+            }
+            /** End of input group **/
+        }
+         /** End of modal-body**/   
+
+         /** Start of modal-footer **/
+        .modal-footer{
+            @include flex-center();
+            margin: 0 auto;
+
+            button{
+                margin-right: 0.8rem;
+            }
+        }
+        /** End of modal-footer **/
+     }
+}
+/** End of wrapper **/
