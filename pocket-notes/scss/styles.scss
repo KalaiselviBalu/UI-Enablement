@@ -19,18 +19,38 @@ body{
 .text-dark{
     color: $text-black;
 }
+.header-green {
+    background-color: $color-header-green !important;
+}
+.header-blue {
+    background-color: $color-header-blue !important;
+}
+.header-grey {
+    background-color: $color-header-grey !important;
+}
+.header-brown {
+    background-color: $color-header-brown !important;
+}
+.body-green {
+    background-color: $color-body-green !important;
+}
+.body-blue {
+    background-color: $color-body-blue !important;
+}
+.body-grey {
+    background-color: $color-body-grey !important;
+}
+.body-brown {
+    background-color: $color-body-brown !important;
+}
+
 /** End of Global styles **/
 
 /** Start of wrapper **/
 .wrapper {
    
     /** Start of overlay **/
-    &.overlay {
-        background: rgba(0,0,0,0.4);
-     
-        position: relative;
-        height: 100%;
-    }
+    
      /** End of overlay **/
 
     /** Start of header **/
@@ -64,7 +84,22 @@ body{
                     font-size: 1.2rem;
                     font-family: "Regular";
                     color: $text-black;
-
+                    /* inline SVG */
+                    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: auto 50%;
+                    border-radius:2px;
+                    border:none;
+                    // disable default appearance
+                    outline: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    &::-ms-expand { display: none };
+                        option {
+                            font-size: 0.5rem;
+                        }
                     
                 }
             }
@@ -78,18 +113,47 @@ body{
      .notes-wrapper {
             margin : 2rem 0rem;
             /** Start of container **/
-            .container{
+            &.container{
                 padding: $container-padding;
                 @include grid-container(5 , auto , 1.5rem);
+                &.two-col-layout{
+                    @include grid-container(2 , auto , 1.5rem);
+                }
+                  /** Start of add note **/
+                  .addNote{
+                    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+                    @include flex-center();
+                    background-color: transparent;
+                    height: 25rem;
+
+                    /** Start of note btn **/
+                    .addNoteBtn{
+                        background: $color-red;
+                        padding: 2rem;
+                        border-radius: 100%;
+                        border: none;
+                        outline: none;
+                        box-shadow: none;
+    
+                        .fa {
+                            font-size: 2.5rem;
+                            color: $text-white;
+                        }
+                    }
+                    /** End of note btn **/
+                }
+                  /** End of add note **/
                 /** Start of note **/
                 .note{
-                    background-color: $color-light-green;
+                    background-color: $color-body-green;
+                   
+                    height: 25rem;
                     /** Start of note-header **/
                       .note-header{
                          padding: 1rem;
                           font-size: 1rem;
                           font-family: "Light";
-                          background-color: $color-dark-green;
+                         background-color: $color-header-green;
                           
                           h2{
                               @include para-truncate();
@@ -136,105 +200,195 @@ body{
                       }
                        /** End of note-footer **/
                        
-                       /** Start of add note **/
-                      &.addNote{
-                          background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-                          @include flex-center();
-                          background-color: transparent;
-
-                          /** Start of note btn **/
-                          .addNoteBtn{
-                              background: $color-red;
-                              padding: 2rem;
-                              border-radius: 100%;
-                              border: none;
-                              outline: none;
-                              box-shadow: none;
-          
-                              .fa {
-                                  font-size: 2.5rem;
-                                  color: $text-white;
-                              }
-                          }
-                          /** End of note btn **/
-                      }
-                        /** End of add note **/
+                     
                   }
             }
             /** End of container **/
      }
      /** End of notes-wrapper **/
 
-     /** Start of modal **/
-     .modal {
-        position: absolute;
-        background: #fff;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50% , -50%);
-        z-index: 10;
-        padding: 1.5rem 2rem;
-        width: 40%;
+
+     .modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
         display: none;
 
         &.show {
             display: block;
         }
-        /** Start of modal-header **/
-        .modal-header{
-            text-align: center;
-            padding: 1rem;
-            h4 {
-                font-family: "SemiBold";
-                font-size: $h4;
-            }
+
+        /** Start of modal **/
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            background-color: #fff;
+            transform: translate(-50%, -50%) scale(0.95);
+            padding: 1.5rem 2rem;
+            width: 40%;
+           
         }
-         /** End of modal-header **/
-
-        /** Start of modal-body **/
-        .modal-body {
-            /** Start of input item **/
-            .input-item {
-                display: block;
-                width: 100%;
-                border: 1px solid #000;
-                padding: 1.5rem;
-                margin-bottom: 1.2rem;
-                font-size: 1.2rem;
-                font-family: "Regular";
-            }   
-            /** End of input item **/
-
-            /** Start of input group **/
-            .input-group {
-                display: flex;
-                align-items: center;
-                margin-bottom: 1.2rem;
-                label {
-                    font-size: 1.1rem;
-                    font-family: "Regular";
-                    margin-right: 1.4rem;
-                }  
-                input[type="checkbox"]{
-                    width: 25px;
-                    height: 25px;
-                    margin-right: 0.6rem;
+            /** Start of modal-header **/
+            .modal-header{
+                text-align: center;
+                padding: 1rem;
+                h4 {
+                    font-family: "SemiBold";
+                    font-size: $h4;
                 }
             }
-            /** End of input group **/
-        }
-         /** End of modal-body**/   
+            /** End of modal-header **/
 
-         /** Start of modal-footer **/
-        .modal-footer{
-            @include flex-center();
-            margin: 0 auto;
+            /** Start of modal-body **/
+            .modal-body {
+             
 
-            button{
-                margin-right: 0.8rem;
+                /** Start of form group **/
+                .form-group {
+                    margin-bottom: 1.2rem;
+                       /** Start of input item **/
+                    .input-item {
+                        display: block;
+                        width: 100%;
+                        border: 1px solid #000;
+                        padding: 1.5rem;
+                        font-size: 1.2rem;
+                        font-family: "Regular";
+                    } 
+                    .error-text{
+                        display: none;
+                        color: red;
+                        font-family: "Regular";
+                        font-size: $small-text;
+                        margin-top: 0.5rem;
+
+                        &.show{
+                            display: block;
+                        }
+                    }
+                    /** End of input item **/
+                } 
+                /** End of form grouo **/
+                
+                /** Start of input group **/
+                .input-group {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 1.2rem;
+                    label {
+                        font-size: 1.1rem;
+                        font-family: "Regular";
+                        margin-right: 1.4rem;
+                    }  
+                    input[type="checkbox"]{
+                        width: 25px;
+                        height: 25px;
+                        margin-right: 0.6rem;
+                    }
+                }
+                /** Start of checkbox container **/
+                .checkbox_container {
+                    display: block;
+                    position: relative;
+                    padding-left: 10px;
+                    margin-bottom: 12px;
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                      /** Start of checkbox container input **/
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                        &:checked {
+                            ~ {
+                                .checkmark {
+                                    &:after {
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                      /** Start of checkbox container checkmark : checked **/
+                    .checkmark {
+                        &:after {
+                            left: 8px;
+                                top: 6px;
+                                width: 5px;
+                                height: 9px;
+                                border: solid #000;
+                                border-width: 0 1px 1px 0;
+                                transform: rotate(35deg);
+                        }
+                    }
+                    /** End of checkbox container checkmark : checked **/
+                }
+                /** End of checkbox container **/
+
+                /** Start of checkbox checkmark unchecked **/
+                .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    
+                &.green{
+                    background-color: $color-body-green;
+                }
+                &.blue{
+                    background-color: $color-body-blue;
+                }
+                &.grey{
+                    background-color: $color-body-grey;
+                }
+                &.brown{
+                    background-color: $color-body-brown;
+                }
+                
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+                 /** End of checkbox checkmark unchecked **/
+                /** Start of confirm delete note **/
+                .confirm-desc-text{
+                    font-family: "Regular";
+                    font-size: 1.2rem;
+                    margin:1rem 0rem;
+
+                }
+                 /** End of confirm delete note **/
             }
+            /** End of modal-body**/   
+
+            /** Start of modal-footer **/
+            .modal-footer{
+                @include flex-center();
+                margin: 0 auto;
+
+                button{
+                    margin-right: 0.8rem;
+                }
+            }
+            /** End of modal-footer **/
         }
-        /** End of modal-footer **/
+        /** End of modal **/
      }
-}
+    
+
 /** End of wrapper **/

@@ -2,9 +2,14 @@
 /** Start of color variables **/
 $color-red : #a80000;
 $color-blue : #d2e3f8;
-$color-grey :#dededf;
-$color-dark-green :#a5d178;
-$color-light-green : #b8e986;
+$color-header-green :#a5d178;
+$color-body-green : #b8e986;
+$color-header-blue :#bccce1;
+$color-body-blue : #d2e3f8;
+$color-header-grey : #cbcbd1;
+$color-body-grey : #dededf;
+$color-header-brown : #bdafb1;
+$color-body-brown : #dccdcf;
 $color-light : #eeeeee;
 /** End of color variables **/
 
@@ -16,10 +21,13 @@ $text-black : #000;
 
 /** Start of elements padding **/
 $container-padding : 1.8rem 3.7rem;
-
 /** End of elements padding;
 
 
 /** Heading styles font size **/
 $h3 : 1.8rem;
 $h4 : 1.5rem;
+/** End of Heading styles font size **/
+
+/** small text **/
+$small-text : 0.8rem;
