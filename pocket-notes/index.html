@@ -27,12 +27,6 @@
           <!--Start of view selection -->
           <div class="view-selection">
             <p>Default View</p>
-            <!--Start of select -->
-            <select name="view-selection-dropdown" id="viewBySelection">
-              <option value="default">5 Column Format</option>
-              <option value="2">2 Column Format</option>
-            </select>
-            <!--End of select -->
           </div>
           <!--End of view selection -->
         </div>
@@ -41,40 +35,21 @@
       <!--End of header-->
       <!--Start of notes wrapper-->
       <div class="notes-wrapper container">
-        <div class="addNote">
-          <button class="addNoteBtn" id="addNoteBtn" onclick="addNote()">
+        <div class="add-note">
+          <button class="add-note-btn" id="add-note-btn">
             <i class="fa fa-solid fa-plus"></i>
           </button>
         </div>
       </div>
       <!--End of notes wrapper-->
       <!-- Start of modal-container-->
-      <div class="modal-container">
-        <!--Start of modal-->
-        <div class="modal">
-          <!--Start of modal header-->
-          <div class="modal-header">
-            <h4></h4>
-          </div>
-          <!--End of modal header-->
-          <!--Start of form-->
-          <form action="" id="addNoteForm">
-            <!--Start of modal body-->
-            <div class="modal-body"></div>
-            <!--End of modal body-->
-            <!--Start of modal footer-->
-            <div class="modal-footer"></div>
-            <!--End of modal footer-->
-          </form>
-        </div>
-        <!--End of modal-->
-      </div>
+      <div class="modal-container"></div>
       <!--End of modal-container-->
     </div>
     <!--End of wrapper-->
 
     <!--Link of external js-->
-    <script src="/scripts/variables.js"></script>
-    <script src="/scripts/script.js"></script>
+
+    <script src="/scripts/script.js" type="module"></script>
   </body>
 </html>

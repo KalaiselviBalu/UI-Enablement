@@ -4,45 +4,40 @@
 @use "mixins/mixins" as *;
 
 /** Start of Global styles **/
+
+/** Start of body **/
 body{
     height: 100vh;
 }
+/** End of body **/
+
+/** Start of btn-danger **/
 .btn-danger{
     background-color: $color-red;
 }
+/** End of btn-danger **/
+
+/** Start of btn-light **/
 .btn-light{
     background-color: $color-light;
 }
+/** End of btn-light **/
+
+/** Start of text-white **/
 .text-white{
     color: $text-white;
 }
+/** End of text-white **/
+
+/** Start of text-dark **/
 .text-dark{
     color: $text-black;
 }
-.header-green {
-    background-color: $color-header-green !important;
-}
-.header-blue {
-    background-color: $color-header-blue !important;
-}
-.header-grey {
-    background-color: $color-header-grey !important;
-}
-.header-brown {
-    background-color: $color-header-brown !important;
-}
-.body-green {
-    background-color: $color-body-green !important;
-}
-.body-blue {
-    background-color: $color-body-blue !important;
-}
-.body-grey {
-    background-color: $color-body-grey !important;
-}
-.body-brown {
-    background-color: $color-body-brown !important;
-}
+/** End of text-dark **/
+
+
+
+
 
 /** End of Global styles **/
 
@@ -59,29 +54,34 @@ body{
         /** Start of container **/
          .container {
             padding: $container-padding;
-            @include flex-between();
-
+               /** Start of include flex-between() **/
+               @include flex-between();
+               /** End of include flex-between() **/
+            /** Start of container h3 **/
             h3 {
                 font-size: $h3;
                 color: $text-white;
                 font-family: "SemiBold";
                 letter-spacing: 2px;
             }
+             /** End of container h3 **/
              /** Start of view selection **/
             .view-selection{
                 display: flex;
                 align-items: center;
-
+                /** Start of view selection p **/
                 p{
                     color: $text-white;
                     font-family: "SemiBold";
-                    font-size: 1.2rem;
-                    padding-right: 2rem;
+                    font-size: $fs-1_2;
+                    padding-right: $pr-2;
                 }
+                /** End of view selection p **/
+                 /** Start of select **/
                 select {
-                    padding: 0.8rem;
+                    padding: $p-0-8;
                     width: 260px;
-                    font-size: 1.2rem;
+                    font-size: $fs-1_2;
                     font-family: "Regular";
                     color: $text-black;
                     /* inline SVG */
@@ -90,7 +90,7 @@ body{
                     background-repeat: no-repeat;
                     background-size: auto 50%;
                     border-radius:2px;
-                    border:none;
+                    border:$border-none;
                     // disable default appearance
                     outline: none;
                     -moz-appearance: none;
@@ -98,10 +98,11 @@ body{
                     appearance: none;
                     &::-ms-expand { display: none };
                         option {
-                            font-size: 0.5rem;
+                            font-size: $fs-0_5;
                         }
                     
                 }
+                 /** End of select **/
             }
              /** End of view selection **/
          }
@@ -111,32 +112,29 @@ body{
 
      /** Start of notes-wrapper **/
      .notes-wrapper {
-            margin : 2rem 0rem;
+            margin : $mt2 0rem;
             /** Start of container **/
             &.container{
                 padding: $container-padding;
                 @include grid-container(5 , auto , 1.5rem);
-                &.two-col-layout{
-                    @include grid-container(2 , auto , 1.5rem);
-                }
                   /** Start of add note **/
-                  .addNote{
-                    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+                  .add-note{
                     @include flex-center();
+                    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");                 
                     background-color: transparent;
                     height: 25rem;
 
                     /** Start of note btn **/
-                    .addNoteBtn{
+                    .add-note-btn{
                         background: $color-red;
-                        padding: 2rem;
+                        padding: $p-2;
                         border-radius: 100%;
-                        border: none;
+                        border: $border-none;
                         outline: none;
-                        box-shadow: none;
+                        box-shadow: $bx-shadow-none;
     
                         .fa {
-                            font-size: 2.5rem;
+                            font-size: $fs-2_5;
                             color: $text-white;
                         }
                     }
@@ -145,56 +143,58 @@ body{
                   /** End of add note **/
                 /** Start of note **/
                 .note{
-                    background-color: $color-body-green;
                    
                     height: 25rem;
                     /** Start of note-header **/
                       .note-header{
-                         padding: 1rem;
-                          font-size: 1rem;
+                         padding: $p-1;
+                         font-size: $fs-1;
                           font-family: "Light";
-                         background-color: $color-header-green;
-                          
-                          h2{
-                              @include para-truncate();
+                           
+                          &.darken-background{
+                            filter: brightness(0.90);
                           }
+                         
+                           /** Start of note-header h2 **/
+                          h2{
+                              @include para-truncate($para-truncate-width);
+                          }
+                           /** End of note-header h2 **/
                       }
                       /** End of note-header **/
 
                       /** Start of note-body **/
                       .note-body{
-                          padding: 1rem;
+                          padding: $p-1;
                           height: 270px;
                           overflow: auto;
-                         
+                          /** Start of note-body p **/
                           p{
                               font-family: "Light";
-                              font-size: 0.9rem;
+                              font-size: $fs-0_9;
                               word-spacing: 2px;
                               line-height: 20px;
                               text-align: justify;
                              
                           }
+                        /** End of note-body p **/
                       }
                       /** End of note-body **/
 
                       /** Start of note-footer **/
                       .note-footer{
-                          padding: 1rem;
-                          @include flex-between();
+                         @include flex-between();
+                          padding: $p-1;
                           p{
-                              font-size: 0.6rem;
+                              font-size: $fs-0_6;
                               font-family: "SemiBold";
                               text-transform: uppercase;
                           }
                           button {
                               background-color: transparent;
-                              border: none;
-                              outline: none;
-                              box-shadow: none;
                               .fa {
-                                  font-size: 0.9rem;
-                                  color: rgb(85, 83, 83);
+                                  font-size: $fs-0_9;
+                                  color: $delete-icon-color;
                               }
                           }
                       }
@@ -203,10 +203,15 @@ body{
                      
                   }
             }
+            &.five-col-layout{
+                @include grid-container(5 , auto , 1.5rem);
+            }
+            &.two-col-layout{
+                @include grid-container(2 , auto , 1.5rem);
+            }
             /** End of container **/
      }
      /** End of notes-wrapper **/
-
 
      .modal-container {
         position: fixed;
@@ -230,14 +235,14 @@ body{
             z-index: 3;
             background-color: #fff;
             transform: translate(-50%, -50%) scale(0.95);
-            padding: 1.5rem 2rem;
+            padding: $p-1-5 $p-2;
             width: 40%;
            
         }
             /** Start of modal-header **/
             .modal-header{
                 text-align: center;
-                padding: 1rem;
+                padding: $p-1;
                 h4 {
                     font-family: "SemiBold";
                     font-size: $h4;
@@ -251,22 +256,23 @@ body{
 
                 /** Start of form group **/
                 .form-group {
-                    margin-bottom: 1.2rem;
+                    margin-bottom: $mb-1;
                        /** Start of input item **/
                     .input-item {
                         display: block;
                         width: 100%;
                         border: 1px solid #000;
-                        padding: 1.5rem;
-                        font-size: 1.2rem;
+                        padding: $p-1-5;
+                        font-size: $fs-1_2;
                         font-family: "Regular";
                     } 
+                     /** End of input item **/
                     .error-text{
                         display: none;
                         color: red;
                         font-family: "Regular";
-                        font-size: $small-text;
-                        margin-top: 0.5rem;
+                        font-size: $fs-0_8;
+                        margin-top: $mt0-5;
 
                         &.show{
                             display: block;
@@ -280,96 +286,53 @@ body{
                 .input-group {
                     display: flex;
                     align-items: center;
-                    margin-bottom: 1.2rem;
-                    label {
-                        font-size: 1.1rem;
-                        font-family: "Regular";
-                        margin-right: 1.4rem;
-                    }  
-                    input[type="checkbox"]{
-                        width: 25px;
-                        height: 25px;
-                        margin-right: 0.6rem;
-                    }
-                }
-                /** Start of checkbox container **/
-                .checkbox_container {
-                    display: block;
-                    position: relative;
-                    padding-left: 10px;
-                    margin-bottom: 12px;
-                    cursor: pointer;
-                    font-size: 22px;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                      /** Start of checkbox container input **/
-                    input {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 0;
-                        width: 0;
-                        &:checked {
-                            ~ {
-                                .checkmark {
-                                    &:after {
-                                        display: block;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                      /** Start of checkbox container checkmark : checked **/
-                    .checkmark {
-                        &:after {
-                            left: 8px;
-                                top: 6px;
-                                width: 5px;
-                                height: 9px;
-                                border: solid #000;
-                                border-width: 0 1px 1px 0;
-                                transform: rotate(35deg);
-                        }
-                    }
-                    /** End of checkbox container checkmark : checked **/
-                }
-                /** End of checkbox container **/
-
-                /** Start of checkbox checkmark unchecked **/
-                .checkmark {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 25px;
-                    width: 25px;
+                    margin-bottom: $mb-1;
                     
-                &.green{
-                    background-color: $color-body-green;
-                }
-                &.blue{
-                    background-color: $color-body-blue;
-                }
-                &.grey{
-                    background-color: $color-body-grey;
-                }
-                &.brown{
-                    background-color: $color-body-brown;
-                }
-                
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        display: none;
+                    .bg-options-container{
+                        display: flex;
+                        margin-left: $ml1-5;;
                     }
+                    /** Start of label **/
+                    label {
+                        font-size: $fs-1_1;
+                        font-family: "Regular";
+                       
+                    }  
+                   
+                   input[type=radio] {
+                       appearance: none;                   
+                       width: 25px;
+                       height: 25px;
+                       display: inline-flex;
+                       margin-right: $mr0-5;
+                       position: relative;
+                      
+                     }
+                   
+                   input[type=radio]::before {
+                       content: "";
+                       position: absolute;                    
+                       left: 50%;
+                       top: 50%;
+                       width: 13px;
+                       height: 13px;
+                       transform: scale(0);
+                       transform-origin: bottom left;
+                       background-color: #000;
+                       clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+                   }
+                   
+                   input[type=radio]:checked::before {
+                       transform: scale(1) translate(-50%, -50%);
+                   }
+                  
+                 
+                 
                 }
-                 /** End of checkbox checkmark unchecked **/
-                /** Start of confirm delete note **/
                 .confirm-desc-text{
                     font-family: "Regular";
-                    font-size: 1.2rem;
-                    margin:1rem 0rem;
+                    font-size: $fs-1_2;
+                    margin:$mt1 0rem;
 
                 }
                  /** End of confirm delete note **/
@@ -382,12 +345,12 @@ body{
                 margin: 0 auto;
 
                 button{
-                    margin-right: 0.8rem;
+                    margin-right: $mr0-75;
                 }
             }
             /** End of modal-footer **/
         }
-        /** End of modal **/
+        /** End of modal **/       
      }
     
 

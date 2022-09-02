@@ -1,4 +1,6 @@
 
+
+
 /** Start of mixin : flex-betweem **/
 @mixin flex-between {
     display: flex;
@@ -22,8 +24,8 @@
 }
 /** Start of mixin : grid-container **/
 /** Start of mixin : para-truncate **/
-@mixin para-truncate{
-    width: 250px;
+@mixin para-truncate($width){
+    width: $width;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

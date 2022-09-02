@@ -21,15 +21,31 @@
 /** End of Font-family : SemiBold " **/
 /** Start of color variables **/
 /** End of color variables **/
-/** Start of text color **/
-/** End of text color **/
+/** Start of box-shadow values **/
+/** End of box-shadow values **/
+/** Start of border values **/
+/** End of border values **/
+/** Start of text color variables **/
+/** End of text color variables **/
+/** Heading styles font size **/
+/** End of Heading styles font size **/
+/** Start of font-size **/
+/** End of font-size  **/
+/** Start of para-truncate width **/
+/** End of para-truncate width**/
+/** Start of margin-tops **/
+/** End of margin-tops **/
+/** Start of margin-right **/
+/** End of margin-right **/
+/** Start of margin-left **/
+/** End of margin-left **/
+/** Start of margin-bottoms **/
+/** End of margin-bottoms **/
 /** Start of elements padding **/
 /** End of elements padding;
 
-
-/** Heading styles font size **/
-/** End of Heading styles font size **/
-/** small text **/
+/** Start of elements padding-right **/
+/** End of elements padding-right **/
 /** Start of mixin : flex-betweem **/
 /** End of mixin : flex-betweem **/
 /** Start of mixin : flex-center **/
@@ -39,58 +55,36 @@
 /** Start of mixin : para-truncate **/
 /** Start of mixin : para-truncate **/
 /** Start of Global styles **/
+/** Start of body **/
 body {
   height: 100vh;
 }
 
+/** End of body **/
+/** Start of btn-danger **/
 .btn-danger {
   background-color: #a80000;
 }
 
+/** End of btn-danger **/
+/** Start of btn-light **/
 .btn-light {
   background-color: #eeeeee;
 }
 
+/** End of btn-light **/
+/** Start of text-white **/
 .text-white {
   color: #fff;
 }
 
+/** End of text-white **/
+/** Start of text-dark **/
 .text-dark {
   color: #000;
 }
 
-.header-green {
-  background-color: #a5d178 !important;
-}
-
-.header-blue {
-  background-color: #bccce1 !important;
-}
-
-.header-grey {
-  background-color: #cbcbd1 !important;
-}
-
-.header-brown {
-  background-color: #bdafb1 !important;
-}
-
-.body-green {
-  background-color: #b8e986 !important;
-}
-
-.body-blue {
-  background-color: #d2e3f8 !important;
-}
-
-.body-grey {
-  background-color: #dededf !important;
-}
-
-.body-brown {
-  background-color: #dccdcf !important;
-}
-
+/** End of text-dark **/
 /** End of Global styles **/
 /** Start of wrapper **/
 .wrapper {
@@ -109,9 +103,13 @@ body {
 }
 .wrapper header .container {
   padding: 1.8rem 3.7rem;
+  /** Start of include flex-between() **/
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /** End of include flex-between() **/
+  /** Start of container h3 **/
+  /** End of container h3 **/
   /** Start of view selection **/
   /** End of view selection **/
 }
@@ -124,6 +122,10 @@ body {
 .wrapper header .container .view-selection {
   display: flex;
   align-items: center;
+  /** Start of view selection p **/
+  /** End of view selection p **/
+  /** Start of select **/
+  /** End of select **/
 }
 .wrapper header .container .view-selection p {
   color: #fff;
@@ -170,23 +172,17 @@ body {
   /** End of add note **/
   /** Start of note **/
 }
-.wrapper .notes-wrapper.container.two-col-layout {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 1.5rem;
-}
-.wrapper .notes-wrapper.container .addNote {
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+.wrapper .notes-wrapper.container .add-note {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
   background-color: transparent;
   height: 25rem;
   /** Start of note btn **/
   /** End of note btn **/
 }
-.wrapper .notes-wrapper.container .addNote .addNoteBtn {
+.wrapper .notes-wrapper.container .add-note .add-note-btn {
   background: #a80000;
   padding: 2rem;
   border-radius: 100%;
@@ -194,12 +190,11 @@ body {
   outline: none;
   box-shadow: none;
 }
-.wrapper .notes-wrapper.container .addNote .addNoteBtn .fa {
+.wrapper .notes-wrapper.container .add-note .add-note-btn .fa {
   font-size: 2.5rem;
   color: #fff;
 }
 .wrapper .notes-wrapper.container .note {
-  background-color: #b8e986;
   height: 25rem;
   /** Start of note-header **/
   /** End of note-header **/
@@ -212,7 +207,11 @@ body {
   padding: 1rem;
   font-size: 1rem;
   font-family: "Light";
-  background-color: #a5d178;
+  /** Start of note-header h2 **/
+  /** End of note-header h2 **/
+}
+.wrapper .notes-wrapper.container .note .note-header.darken-background {
+  filter: brightness(0.9);
 }
 .wrapper .notes-wrapper.container .note .note-header h2 {
   width: 250px;
@@ -224,6 +223,8 @@ body {
   padding: 1rem;
   height: 270px;
   overflow: auto;
+  /** Start of note-body p **/
+  /** End of note-body p **/
 }
 .wrapper .notes-wrapper.container .note .note-body p {
   font-family: "Light";
@@ -233,10 +234,10 @@ body {
   text-align: justify;
 }
 .wrapper .notes-wrapper.container .note .note-footer {
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 .wrapper .notes-wrapper.container .note .note-footer p {
   font-size: 0.6rem;
@@ -245,13 +246,22 @@ body {
 }
 .wrapper .notes-wrapper.container .note .note-footer button {
   background-color: transparent;
-  border: none;
-  outline: none;
-  box-shadow: none;
 }
 .wrapper .notes-wrapper.container .note .note-footer button .fa {
   font-size: 0.9rem;
   color: rgb(85, 83, 83);
+}
+.wrapper .notes-wrapper.five-col-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+.wrapper .notes-wrapper.two-col-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
 }
 .wrapper .modal-container {
   position: fixed;
@@ -295,16 +305,12 @@ body {
   /** Start of form group **/
   /** End of form grouo **/
   /** Start of input group **/
-  /** Start of checkbox container **/
-  /** End of checkbox container **/
-  /** Start of checkbox checkmark unchecked **/
-  /** End of checkbox checkmark unchecked **/
-  /** Start of confirm delete note **/
   /** End of confirm delete note **/
 }
 .wrapper .modal-container .modal-body .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   /** Start of input item **/
+  /** End of input item **/
   /** End of input item **/
 }
 .wrapper .modal-container .modal-body .form-group .input-item {
@@ -328,75 +334,42 @@ body {
 .wrapper .modal-container .modal-body .input-group {
   display: flex;
   align-items: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
+  /** Start of label **/
+}
+.wrapper .modal-container .modal-body .input-group .bg-options-container {
+  display: flex;
+  margin-left: 1.5rem;
 }
 .wrapper .modal-container .modal-body .input-group label {
   font-size: 1.1rem;
   font-family: "Regular";
-  margin-right: 1.4rem;
 }
-.wrapper .modal-container .modal-body .input-group input[type=checkbox] {
+.wrapper .modal-container .modal-body .input-group input[type=radio] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   width: 25px;
   height: 25px;
-  margin-right: 0.6rem;
-}
-.wrapper .modal-container .modal-body .checkbox_container {
-  display: block;
+  display: inline-flex;
+  margin-right: 0.5rem;
   position: relative;
-  padding-left: 10px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  /** Start of checkbox container input **/
-  /** Start of checkbox container checkmark : checked **/
-  /** End of checkbox container checkmark : checked **/
 }
-.wrapper .modal-container .modal-body .checkbox_container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-.wrapper .modal-container .modal-body .checkbox_container input:checked ~ .checkmark:after {
-  display: block;
-}
-.wrapper .modal-container .modal-body .checkbox_container .checkmark:after {
-  left: 8px;
-  top: 6px;
-  width: 5px;
-  height: 9px;
-  border: solid #000;
-  border-width: 0 1px 1px 0;
-  transform: rotate(35deg);
-}
-.wrapper .modal-container .modal-body .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-}
-.wrapper .modal-container .modal-body .checkmark.green {
-  background-color: #b8e986;
-}
-.wrapper .modal-container .modal-body .checkmark.blue {
-  background-color: #d2e3f8;
-}
-.wrapper .modal-container .modal-body .checkmark.grey {
-  background-color: #dededf;
-}
-.wrapper .modal-container .modal-body .checkmark.brown {
-  background-color: #dccdcf;
-}
-.wrapper .modal-container .modal-body .checkmark:after {
+.wrapper .modal-container .modal-body .input-group input[type=radio]::before {
   content: "";
   position: absolute;
-  display: none;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  transform: scale(0);
+  transform-origin: bottom left;
+  background-color: #000;
+  -webkit-clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+          clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+}
+.wrapper .modal-container .modal-body .input-group input[type=radio]:checked::before {
+  transform: scale(1) translate(-50%, -50%);
 }
 .wrapper .modal-container .modal-body .confirm-desc-text {
   font-family: "Regular";
@@ -410,7 +383,7 @@ body {
   margin: 0 auto;
 }
 .wrapper .modal-container .modal-footer button {
-  margin-right: 0.8rem;
+  margin-right: 0.75rem;
 }
 
 /** End of wrapper **//*# sourceMappingURL=styles.css.map */
