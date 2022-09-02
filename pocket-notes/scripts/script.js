@@ -1,4 +1,4 @@
-import { APP_CONSTANTS } from "./constants.js";
+import { APP_CONSTANTS } from "./constants/constants.js";
 
 
 const wrapper = document.querySelector(".wrapper");
