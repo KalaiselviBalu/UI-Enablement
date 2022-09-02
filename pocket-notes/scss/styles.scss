@@ -52,7 +52,7 @@ body{
             h3 {
                 font-size: $h3;
                 color: $text-white;
-                font-family: "SemiBold";
+                font-family: $semi-bold;
                 letter-spacing: 2px;
             }
              /** End of container h3 **/
@@ -63,7 +63,7 @@ body{
                 /** Start of view selection p **/
                 p{
                     color: $text-white;
-                    font-family: "SemiBold";
+                    font-family: $semi-bold;
                     font-size: $fs-1_2;
                     padding-right: $pr-2;
                 }
@@ -73,7 +73,7 @@ body{
                     padding: $p-0-8;
                     width: 260px;
                     font-size: $fs-1_2;
-                    font-family: "Regular";
+                    font-family: $regular;
                     color: $text-black;
                     /* inline SVG */
                     background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
@@ -140,7 +140,7 @@ body{
                       .note-header{
                          padding: $p-1;
                          font-size: $fs-1;
-                          font-family: "Light";
+                          font-family: $light;
                            
                           &.darken-background{
                             filter: brightness(0.90);
@@ -161,7 +161,7 @@ body{
                           overflow: auto;
                           /** Start of note-body p **/
                           p{
-                              font-family: "Light";
+                              font-family: $light;
                               font-size: $fs-0_9;
                               word-spacing: 2px;
                               line-height: 20px;
@@ -178,7 +178,7 @@ body{
                           padding: $p-1;
                           p{
                               font-size: $fs-0_6;
-                              font-family: "SemiBold";
+                              font-family: $semi-bold;
                               text-transform: uppercase;
                               color: $date-text-color;
                           }
@@ -226,122 +226,121 @@ body{
             top: 50%;
             left: 50%;
             z-index: 3;
-            background-color: #fff;
+            background-color: $color-white;
             transform: translate(-50%, -50%) scale(0.95);
             padding: $p-1-5 $p-2;
             width: 40%;
-           
-        }
-            /** Start of modal-header **/
-            .modal-header{
-                text-align: center;
-                padding: $p-1;
-                h4 {
-                    font-family: "SemiBold";
-                    font-size: $h4;
+
+                /** Start of modal-header **/
+                .modal-header{
+                    text-align: center;
+                    padding: $p-1;
+                    h4 {
+                        font-family: $semi-bold;
+                        font-size: $h4;
+                    }
                 }
-            }
-            /** End of modal-header **/
+                /** End of modal-header **/
 
-            /** Start of modal-body **/
-            .modal-body {
-             
-
-                /** Start of form group **/
-                .form-group {
-                    margin-bottom: $mb-1;
-                       /** Start of input item **/
-                    .input-item {
-                        display: block;
-                        width: 100%;
-                        border: 1px solid #000;
-                        padding: $p-1-5;
-                        font-size: $fs-1_2;
-                        font-family: "Regular";
-                    } 
-                     /** End of input item **/
-                    .error-text{
-                        display: none;
-                        color: red;
-                        font-family: "Regular";
-                        font-size: $fs-0_8;
-                        margin-top: $mt0-5;
-
-                        &.show{
+                /** Start of modal-body **/
+                .modal-body {
+                    /** Start of form group **/
+                    .form-group {
+                        margin-bottom: $mb-1;
+                        /** Start of input item **/
+                        .input-item {
                             display: block;
+                            width: 100%;
+                            border: 1px solid #000;
+                            padding: $p-1-5;
+                            font-size: $fs-1_2;
+                            font-family: $regular;
+                        } 
+                        /** End of input item **/
+                        .error-text{
+                            display: none;
+                            color: $text-error;
+                            font-family: $regular;
+                            font-size: $fs-0_8;
+                            margin-top: $mt0-5;
+
+                            &.show{
+                                display: block;
+                            }
                         }
-                    }
-                    /** End of input item **/
-                } 
-                /** End of form grouo **/
-                
-                /** Start of input group **/
-                .input-group {
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: $mb-1;
+                        /** End of input item **/
+                    } 
+                    /** End of form grouo **/
                     
-                    .bg-options-container{
+                    /** Start of input group **/
+                    .input-group {
                         display: flex;
-                        margin-left: $ml1-5;;
+                        align-items: center;
+                        margin-bottom: $mb-1;
+                        
+                        .bg-options-container{
+                            display: flex;
+                            margin-left: $ml1-5;;
+                        }
+                        /** Start of label **/
+                        label {
+                            font-size: $fs-1_1;
+                            font-family:$regular;
+                        
+                        }  
+                    
+                    input[type=radio] {
+                        appearance: none;                   
+                        width: 25px;
+                        height: 25px;
+                        display: inline-flex;
+                        margin-right: $mr0-5;
+                        position: relative;
+                        
+                        }
+                    
+                    input[type=radio]::before {
+                        content: "";
+                        position: absolute;                    
+                        left: 50%;
+                        top: 50%;
+                        width: 13px;
+                        height: 13px;
+                        transform: scale(0);
+                        transform-origin: bottom left;
+                        background-color: #000;
+                        clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
                     }
-                    /** Start of label **/
-                    label {
-                        font-size: $fs-1_1;
-                        font-family: "Regular";
-                       
-                    }  
-                   
-                   input[type=radio] {
-                       appearance: none;                   
-                       width: 25px;
-                       height: 25px;
-                       display: inline-flex;
-                       margin-right: $mr0-5;
-                       position: relative;
-                      
-                     }
-                   
-                   input[type=radio]::before {
-                       content: "";
-                       position: absolute;                    
-                       left: 50%;
-                       top: 50%;
-                       width: 13px;
-                       height: 13px;
-                       transform: scale(0);
-                       transform-origin: bottom left;
-                       background-color: #000;
-                       clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
-                   }
-                   
-                   input[type=radio]:checked::before {
-                       transform: scale(1) translate(-50%, -50%);
-                   }
-                  
-                 
-                 
-                }
-                .confirm-desc-text{
-                    font-family: "Regular";
-                    font-size: $fs-1_2;
-                    margin:$mt1 0rem;
+                    
+                    input[type=radio]:checked::before {
+                        transform: scale(1) translate(-50%, -50%);
+                    }
+                    
+                    
+                    
+                    }
+                    .confirm-desc-text{
+                        font-family: $regular;
+                        font-size: $fs-1_2;
+                        margin:$mt1 0rem;
 
+                    }
+                    /** End of confirm delete note **/
                 }
-                 /** End of confirm delete note **/
-            }
-            /** End of modal-body**/   
+                /** End of modal-body**/   
 
-            /** Start of modal-footer **/
-            .modal-footer{
-                @include flex-center();
-                margin: 0 auto;
+                /** Start of modal-footer **/
+                .modal-footer{
+                    @include flex-center();
+                    margin: 0 auto;
 
-                button{
-                    margin-right: $mr0-75;
+                    button{
+                        margin-right: $mr0-75;
+                    }
                 }
-            }
-            /** End of modal-footer **/
+                /** End of modal-footer **/
+        }
+            
         }
         /** End of modal **/       
      }
