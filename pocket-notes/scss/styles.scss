@@ -35,20 +35,11 @@ body{
 }
 /** End of text-dark **/
 
-
-
-
-
 /** End of Global styles **/
 
 /** Start of wrapper **/
 .wrapper {
-   
-    /** Start of overlay **/
-    
-     /** End of overlay **/
-
-    /** Start of header **/
+       /** Start of header **/
     header{
         background-color: $color-red;
         /** Start of container **/
@@ -189,12 +180,14 @@ body{
                               font-size: $fs-0_6;
                               font-family: "SemiBold";
                               text-transform: uppercase;
+                              color: $date-text-color;
                           }
                           button {
                               background-color: transparent;
                               .fa {
                                   font-size: $fs-0_9;
-                                  color: $delete-icon-color;
+                                  color: $date-text-color;
+                                  font-weight: 500;
                               }
                           }
                       }

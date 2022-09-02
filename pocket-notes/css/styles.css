@@ -88,8 +88,6 @@ body {
 /** End of Global styles **/
 /** Start of wrapper **/
 .wrapper {
-  /** Start of overlay **/
-  /** End of overlay **/
   /** Start of header **/
   /** End of header **/
   /** Start of notes-wrapper **/
@@ -243,13 +241,15 @@ body {
   font-size: 0.6rem;
   font-family: "SemiBold";
   text-transform: uppercase;
+  color: #696767;
 }
 .wrapper .notes-wrapper.container .note .note-footer button {
   background-color: transparent;
 }
 .wrapper .notes-wrapper.container .note .note-footer button .fa {
   font-size: 0.9rem;
-  color: rgb(85, 83, 83);
+  color: #696767;
+  font-weight: 500;
 }
 .wrapper .notes-wrapper.five-col-layout {
   display: grid;

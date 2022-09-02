@@ -74,7 +74,6 @@ let noteObject ;
         const addModalTitle = modalDataAddNote.MODAL_TITLE;
         const addModalButtons = modalDataAddNote.BUTTON_LABELS;
         
-
         const addNotemodal = `<div class="modal">
                                         <div class="modal-header">
                                             <h4>${addModalTitle}</h4>
@@ -89,7 +88,7 @@ let noteObject ;
                                                     placeholder = ${formInputDataAdd.NOTE_TITLE.LABEL}
                                                     class="input-item"
                                                     />
-                                                    <span class="error-text"></span>
+                                                    <span class="error-text error-text-title"></span>
                                                 </div>
                                                 <div class="form-group">
                                                     <textarea
@@ -99,7 +98,7 @@ let noteObject ;
                                                         class="input-item"
                                                         placeholder=${formInputDataAdd.NOTE_DESCRIPTION.LABEL}
                                                     ></textarea>
-                                                    <span class="error-text"></span>
+                                                    <span class="error-text error-text-description"></span>
                                                 </div>
                                                 <div class="form-group bg-choice-group">
                                                     <div class="input-group">
@@ -160,15 +159,13 @@ let noteObject ;
                 // Get Todays Date //
                 const todaysDate = new Date();
                 // Get date value //
-
                 const dateVal = String(todaysDate.getDate());
                 // Get month value //
-
                 const monthVal = todaysDate.toLocaleString('en-us', {
                 month: 'short'
                 });
 
-
+                // Start of function BgColor //
                 let selectedBgColor;
                 (function setBgColor(){
                     let colorOptions = document.getElementsByName('bg-color');                 
@@ -179,23 +176,85 @@ let noteObject ;
                     }
                    
                 })();
+                 // End of function BgColor //
 
-                 noteObject = {
-                                    title : noteTitle,
-                                    description : noteDescription,
-                                    color : selectedBgColor,
-                                    date : dateVal + monthVal,
-                                   
-                                }
-                                hideModal();
-                                notesArr.push(noteObject);
-                                showNotes(noteObject);
-                                // Set local storage for new note //
-                                localStorage.setItem("notesArr", JSON.stringify(notesArr));
-                              
-                         
-                           
+                validateForm(noteTitle,noteDescription);
+
+                 // Start of function validateForm //
+                function validateForm(noteTitle , noteDescription) {
             
+                    const errorObJ = APP_CONSTANTS.ERROR_MESSAGES.ADD_NOTE;
+                      
+                      const errorTextTitle =  document.querySelector(".error-text-title");
+                      const errorTextDescription =  document.querySelector(".error-text-description");
+
+                        // if(noteTitle && noteDescription){ 
+
+                        //     if(noteTitle.length > 60 && noteDescription.length > 255) {
+                               
+                        //     }
+                        //     else if (!noteTitle){
+                              
+                        //        // errorTextTitle.classList.add("show");
+                        //         //errorTextTitle.textContent = errorObJ.NOTE_TITLE.TITLE_MAX_LENGTH_ERROR;
+                        //     }
+                        //     else if (!noteDescription) {
+                        //         errorTextDescription.classList.add("show");
+                        //         errorTextDescription.textContent = errorObJ.NOTE_DESCRIPTION.DESCRIPTION_REQUIRED_ERROR;
+                        //     }
+                          
+                        // }
+
+                        if(noteTitle === "" & noteDescription === "" ){
+                            errorTextTitle.classList.add("show")
+                            errorTextTitle.textContent = errorObJ.NOTE_TITLE.TITLE_REQUIRED_ERROR;
+                            errorTextDescription.classList.add("show")
+                            errorTextDescription.textContent = errorObJ.NOTE_DESCRIPTION.DESCRIPTION_REQUIRED_ERROR;
+                        }
+                      
+                        else if(noteTitle === "" && noteDescription){
+                            errorTextTitle.classList.add("show")
+                            errorTextTitle.textContent = errorObJ.NOTE_TITLE.TITLE_REQUIRED_ERROR;
+                            errorTextDescription.textContent = "";
+                        }
+                       else if(noteDescription === "" && noteTitle) {
+                        errorTextTitle.textContent = "";
+                        errorTextDescription.classList.add("show")
+                        errorTextDescription.textContent = errorObJ.NOTE_DESCRIPTION.DESCRIPTION_REQUIRED_ERROR;
+                       }
+                       else if(noteTitle.length > 60) {
+                        errorTextTitle.classList.add("show");
+                        errorTextTitle.textContent = errorObJ.NOTE_TITLE.TITLE_MAX_LENGTH_ERROR;
+                       }
+                       else if(noteDescription.length > 255) {
+                        errorTextDescription.classList.add("show");
+                        errorTextDescription.textContent = errorObJ.NOTE_DESCRIPTION.DESCRIPTION_MAX_LENGTH_ERROR;
+                       }
+                       else {
+                       
+                        pushData()
+                       }
+                      
+                  };
+                 // End of function validateForm //
+
+                 // Start of function pushData //
+                function pushData(){
+                    noteObject = {
+                        title : noteTitle,
+                        description : noteDescription,
+                        color : selectedBgColor,
+                        date : dateVal + " " +monthVal,     
+                       }
+    
+                     hideModal();
+                    notesArr.push(noteObject);
+                    showNotes(noteObject);
+                    // Set local storage for new note //
+                    localStorage.setItem("notesArr", JSON.stringify(notesArr));
+    
+                }   
+                // End of function pushData //
         }
         // End of function showColorOptions() //
 
@@ -221,7 +280,7 @@ let noteObject ;
             </div>
             <div class="note-footer">
                 <p>${note.date}</p>
-                <button class="delete-note-btn" id = ${id}  ><i class="fa fa-solid fa-trash-can"></i></button>
+                <button class="delete-note-btn" id = ${id}  ><i class="fa fa-light fa-trash-can"></i></button>
             </div>
             </div>
             `;
@@ -301,7 +360,7 @@ let noteObject ;
         }
         // End of function createModal() //  
        
-      
+ 
 
        
 

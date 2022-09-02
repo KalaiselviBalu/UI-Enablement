@@ -68,7 +68,7 @@ export const APP_CONSTANTS = {
             },
             NOTE_DESCRIPTION : {
                 DESCRIPTION_REQUIRED_ERROR: "Please enter note description",
-                DESCRIPTION_MAX_LENGTH_ERROR : "Please enter note title less than 255 characters"
+                DESCRIPTION_MAX_LENGTH_ERROR : "Please enter note description less than 255 characters"
             }
         }
     }
