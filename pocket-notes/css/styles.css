@@ -160,6 +160,8 @@ body {
 .wrapper .notes-wrapper {
   margin: 2rem 0rem;
   /** Start of container **/
+  /** Start of layout change class **/
+  /** Start of layout change class **/
   /** End of container **/
 }
 .wrapper .notes-wrapper.container {
@@ -338,6 +340,7 @@ body {
   align-items: center;
   margin-bottom: 1rem;
   /** Start of label **/
+  /** Start of choose-color checkbox **/
 }
 .wrapper .modal-container .modal .modal-body .input-group .bg-options-container {
   display: flex;
@@ -347,7 +350,7 @@ body {
   font-size: 1.1rem;
   font-family: "Regular";
 }
-.wrapper .modal-container .modal .modal-body .input-group input[type=radio] {
+.wrapper .modal-container .modal .modal-body .input-group .choose-color {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -356,8 +359,13 @@ body {
   display: inline-flex;
   margin-right: 0.5rem;
   position: relative;
+  /** Start of choose-color checkbox checkmark **/
+  /** End of choose-color checkbox  checkmark**/
+  /** Start of choose-color active checkbox **/
+  /** End of choose-color active checkbox **/
+  /** End of choose-color checkbox **/
 }
-.wrapper .modal-container .modal .modal-body .input-group input[type=radio]::before {
+.wrapper .modal-container .modal .modal-body .input-group .choose-color::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -370,7 +378,7 @@ body {
   -webkit-clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
           clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
 }
-.wrapper .modal-container .modal .modal-body .input-group input[type=radio]:checked::before {
+.wrapper .modal-container .modal .modal-body .input-group .choose-color.choose-color:checked::before {
   transform: scale(1) translate(-50%, -50%);
 }
 .wrapper .modal-container .modal .modal-body .confirm-desc-text {

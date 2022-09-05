@@ -192,16 +192,16 @@ body{
                           }
                       }
                        /** End of note-footer **/
-                       
-                     
                   }
             }
+            /** Start of layout change class **/
             &.five-col-layout{
                 @include grid-container(5 , auto , 1.5rem);
             }
             &.two-col-layout{
                 @include grid-container(2 , auto , 1.5rem);
             }
+            /** Start of layout change class **/
             /** End of container **/
      }
      /** End of notes-wrapper **/
@@ -288,36 +288,37 @@ body{
                             font-family:$regular;
                         
                         }  
-                    
-                    input[type=radio] {
+                        /** Start of choose-color checkbox **/
+                       .choose-color {
                         appearance: none;                   
                         width: 25px;
                         height: 25px;
                         display: inline-flex;
                         margin-right: $mr0-5;
                         position: relative;
-                        
+                        /** Start of choose-color checkbox checkmark **/
+                        &::before {
+                            content: "";
+                            position: absolute;                    
+                            left: 50%;
+                            top: 50%;
+                            width: 13px;
+                            height: 13px;
+                            transform: scale(0);
+                            transform-origin: bottom left;
+                            background-color: #000;
+                            clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+                            }
+                        /** End of choose-color checkbox  checkmark**/
+
+                        /** Start of choose-color active checkbox **/
+                        &.choose-color:checked::before {
+                                transform: scale(1) translate(-50%, -50%);
                         }
-                    
-                    input[type=radio]::before {
-                        content: "";
-                        position: absolute;                    
-                        left: 50%;
-                        top: 50%;
-                        width: 13px;
-                        height: 13px;
-                        transform: scale(0);
-                        transform-origin: bottom left;
-                        background-color: #000;
-                        clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
-                    }
-                    
-                    input[type=radio]:checked::before {
-                        transform: scale(1) translate(-50%, -50%);
-                    }
-                    
-                    
-                    
+                        /** End of choose-color active checkbox **/
+
+                          /** End of choose-color checkbox **/
+                        }    
                     }
                     .confirm-desc-text{
                         font-family: $regular;
