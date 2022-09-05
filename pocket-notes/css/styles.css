@@ -1,0 +1,399 @@
+/** Start of Font-family : Light" **/
+@font-face {
+  font-family: "Light";
+  src: url("/assets/fonts/Open_Sans/static/OpenSans/OpenSans-Light.ttf");
+  font-weight: 300;
+}
+/** Start of Font-family : Light " **/
+/** Start of Font-family : Regular" **/
+@font-face {
+  font-family: "Regular";
+  src: url("/assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 400;
+}
+/** Start of Font-family : Regular " **/
+/** Start of Font-family : SemiBold" **/
+@font-face {
+  font-family: "SemiBold";
+  src: url("/assets/fonts/Open_Sans/static/OpenSans/OpenSans-SemiBold.ttf");
+  font-weight: 600;
+}
+/** End of Font-family : SemiBold " **/
+/** Start of color variables **/
+/** End of color variables **/
+/** Start of font-family variables **/
+/** End of font-family variables **/
+/** Start of box-shadow values **/
+/** End of box-shadow values **/
+/** Start of border values **/
+/** End of border values **/
+/** Start of text color variables **/
+/** End of text color variables **/
+/** Heading styles font size **/
+/** End of Heading styles font size **/
+/** Start of font-size **/
+/** End of font-size  **/
+/** Start of para-truncate width **/
+/** End of para-truncate width**/
+/** Start of margin-tops **/
+/** End of margin-tops **/
+/** Start of margin-right **/
+/** End of margin-right **/
+/** Start of margin-left **/
+/** End of margin-left **/
+/** Start of margin-bottoms **/
+/** End of margin-bottoms **/
+/** Start of elements padding **/
+/** End of elements padding;
+
+/** Start of elements padding-right **/
+/** End of elements padding-right **/
+/** Start of mixin : flex-betweem **/
+/** End of mixin : flex-betweem **/
+/** Start of mixin : flex-center **/
+/** Start of mixin : flex-center **/
+/** Start of mixin : grid-container **/
+/** Start of mixin : grid-container **/
+/** Start of mixin : para-truncate **/
+/** Start of mixin : para-truncate **/
+/** Start of Global styles **/
+/** Start of body **/
+body {
+  height: 100vh;
+}
+
+/** End of body **/
+/** Start of btn-danger **/
+.btn-danger {
+  background-color: #A80000;
+}
+
+/** End of btn-danger **/
+/** Start of btn-light **/
+.btn-light {
+  background-color: #EEEEEE;
+}
+
+/** End of btn-light **/
+/** Start of text-white **/
+.text-white {
+  color: #fff;
+}
+
+/** End of text-white **/
+/** Start of text-dark **/
+.text-dark {
+  color: #000;
+}
+
+/** End of text-dark **/
+/** End of Global styles **/
+/** Start of wrapper **/
+.wrapper {
+  /** Start of header **/
+  /** End of header **/
+  /** Start of notes-wrapper **/
+  /** End of notes-wrapper **/
+  /** End of modal **/
+}
+.wrapper header {
+  background-color: #A80000;
+  /** Start of container **/
+  /** End of container **/
+}
+.wrapper header .container {
+  padding: 1.8rem 3.7rem;
+  /** Start of include flex-between() **/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /** End of include flex-between() **/
+  /** Start of container h3 **/
+  /** End of container h3 **/
+  /** Start of view selection **/
+  /** End of view selection **/
+}
+.wrapper header .container h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  font-family: "SemiBold";
+  letter-spacing: 2px;
+}
+.wrapper header .container .view-selection {
+  display: flex;
+  align-items: center;
+  /** Start of view selection p **/
+  /** End of view selection p **/
+  /** Start of select **/
+  /** End of select **/
+}
+.wrapper header .container .view-selection p {
+  color: #fff;
+  font-family: "SemiBold";
+  font-size: 1.2rem;
+  padding-right: 2rem;
+}
+.wrapper header .container .view-selection select {
+  padding: 0.8rem;
+  width: 260px;
+  font-size: 1.2rem;
+  font-family: "Regular";
+  color: #000;
+  /* inline SVG */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.wrapper header .container .view-selection select::-ms-expand {
+  display: none;
+}
+.wrapper header .container .view-selection select option {
+  font-size: 0.5rem;
+}
+.wrapper .notes-wrapper {
+  margin: 2rem 0rem;
+  /** Start of container **/
+  /** Start of layout change class **/
+  /** Start of layout change class **/
+  /** End of container **/
+}
+.wrapper .notes-wrapper.container {
+  padding: 1.8rem 3.7rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  /** Start of add note **/
+  /** End of add note **/
+  /** Start of note **/
+}
+.wrapper .notes-wrapper.container .add-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-color: transparent;
+  height: 25rem;
+  /** Start of note btn **/
+  /** End of note btn **/
+}
+.wrapper .notes-wrapper.container .add-note .add-note-btn {
+  background: #A80000;
+  padding: 2rem;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.wrapper .notes-wrapper.container .add-note .add-note-btn .fa {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.wrapper .notes-wrapper.container .note {
+  height: 25rem;
+  /** Start of note-header **/
+  /** End of note-header **/
+  /** Start of note-body **/
+  /** End of note-body **/
+  /** Start of note-footer **/
+  /** End of note-footer **/
+}
+.wrapper .notes-wrapper.container .note .note-header {
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: "Light";
+  /** Start of note-header h2 **/
+  /** End of note-header h2 **/
+}
+.wrapper .notes-wrapper.container .note .note-header.darken-background {
+  filter: brightness(0.9);
+}
+.wrapper .notes-wrapper.container .note .note-header h2 {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.wrapper .notes-wrapper.container .note .note-body {
+  padding: 1rem;
+  height: 270px;
+  overflow: auto;
+  /** Start of note-body p **/
+  /** End of note-body p **/
+}
+.wrapper .notes-wrapper.container .note .note-body p {
+  font-family: "Light";
+  font-size: 0.9rem;
+  word-spacing: 2px;
+  line-height: 20px;
+  text-align: justify;
+}
+.wrapper .notes-wrapper.container .note .note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.wrapper .notes-wrapper.container .note .note-footer p {
+  font-size: 0.6rem;
+  font-family: "SemiBold";
+  text-transform: uppercase;
+  color: #696767;
+}
+.wrapper .notes-wrapper.container .note .note-footer button {
+  background-color: transparent;
+}
+.wrapper .notes-wrapper.container .note .note-footer button .fa {
+  font-size: 0.9rem;
+  color: #696767;
+  font-weight: 500;
+}
+.wrapper .notes-wrapper.five-col-layout {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+.wrapper .notes-wrapper.two-col-layout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+.wrapper .modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  /** Start of modal **/
+}
+.wrapper .modal-container.show {
+  display: block;
+}
+.wrapper .modal-container .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  background-color: #FFF;
+  transform: translate(-50%, -50%) scale(0.95);
+  padding: 1.5rem 2rem;
+  width: 40%;
+  /** Start of modal-header **/
+  /** End of modal-header **/
+  /** Start of modal-body **/
+  /** End of modal-body**/
+  /** Start of modal-footer **/
+  /** End of modal-footer **/
+}
+.wrapper .modal-container .modal .modal-header {
+  text-align: center;
+  padding: 1rem;
+}
+.wrapper .modal-container .modal .modal-header h4 {
+  font-family: "SemiBold";
+  font-size: 1.5rem;
+}
+.wrapper .modal-container .modal .modal-body {
+  /** Start of form group **/
+  /** End of form grouo **/
+  /** Start of input group **/
+  /** End of confirm delete note **/
+}
+.wrapper .modal-container .modal .modal-body .form-group {
+  margin-bottom: 1rem;
+  /** Start of input item **/
+  /** End of input item **/
+  /** End of input item **/
+}
+.wrapper .modal-container .modal .modal-body .form-group .input-item {
+  display: block;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Regular";
+}
+.wrapper .modal-container .modal .modal-body .form-group .error-text {
+  display: none;
+  color: #FF0000;
+  font-family: "Regular";
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.wrapper .modal-container .modal .modal-body .form-group .error-text.show {
+  display: block;
+}
+.wrapper .modal-container .modal .modal-body .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  /** Start of label **/
+  /** Start of choose-color checkbox **/
+}
+.wrapper .modal-container .modal .modal-body .input-group .bg-options-container {
+  display: flex;
+  margin-left: 1.5rem;
+}
+.wrapper .modal-container .modal .modal-body .input-group label {
+  font-size: 1.1rem;
+  font-family: "Regular";
+}
+.wrapper .modal-container .modal .modal-body .input-group .choose-color {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  position: relative;
+  /** Start of choose-color checkbox checkmark **/
+  /** End of choose-color checkbox  checkmark**/
+  /** Start of choose-color active checkbox **/
+  /** End of choose-color active checkbox **/
+  /** End of choose-color checkbox **/
+}
+.wrapper .modal-container .modal .modal-body .input-group .choose-color::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  transform: scale(0);
+  transform-origin: bottom left;
+  background-color: #000;
+  -webkit-clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+          clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+}
+.wrapper .modal-container .modal .modal-body .input-group .choose-color.choose-color:checked::before {
+  transform: scale(1) translate(-50%, -50%);
+}
+.wrapper .modal-container .modal .modal-body .confirm-desc-text {
+  font-family: "Regular";
+  font-size: 1.2rem;
+  margin: 1rem 0rem;
+}
+.wrapper .modal-container .modal .modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.wrapper .modal-container .modal .modal-footer button {
+  margin-right: 0.75rem;
+}
+
+/** End of wrapper **//*# sourceMappingURL=styles.css.map */

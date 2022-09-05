@@ -1,0 +1,350 @@
+
+@use "fonts/fonts" as *;
+@use "variables/variables" as *;
+@use "mixins/mixins" as *;
+
+/** Start of Global styles **/
+
+/** Start of body **/
+body{
+    height: 100vh;
+}
+/** End of body **/
+
+/** Start of btn-danger **/
+.btn-danger{
+    background-color: $color-red;
+}
+/** End of btn-danger **/
+
+/** Start of btn-light **/
+.btn-light{
+    background-color: $color-light;
+}
+/** End of btn-light **/
+
+/** Start of text-white **/
+.text-white{
+    color: $text-white;
+}
+/** End of text-white **/
+
+/** Start of text-dark **/
+.text-dark{
+    color: $text-black;
+}
+/** End of text-dark **/
+
+/** End of Global styles **/
+
+/** Start of wrapper **/
+.wrapper {
+       /** Start of header **/
+    header{
+        background-color: $color-red;
+        /** Start of container **/
+         .container {
+            padding: $container-padding;
+               /** Start of include flex-between() **/
+               @include flex-between();
+               /** End of include flex-between() **/
+            /** Start of container h3 **/
+            h3 {
+                font-size: $h3;
+                color: $text-white;
+                font-family: $semi-bold;
+                letter-spacing: 2px;
+            }
+             /** End of container h3 **/
+             /** Start of view selection **/
+            .view-selection{
+                display: flex;
+                align-items: center;
+                /** Start of view selection p **/
+                p{
+                    color: $text-white;
+                    font-family: $semi-bold;
+                    font-size: $fs-1_2;
+                    padding-right: $pr-2;
+                }
+                /** End of view selection p **/
+                 /** Start of select **/
+                select {
+                    padding: $p-0-8;
+                    width: 260px;
+                    font-size: $fs-1_2;
+                    font-family: $regular;
+                    color: $text-black;
+                    /* inline SVG */
+                    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+                    background-position: right 10px center;
+                    background-repeat: no-repeat;
+                    background-size: auto 50%;
+                    border-radius:2px;
+                    border:$border-none;
+                    // disable default appearance
+                    outline: none;
+                    -moz-appearance: none;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    &::-ms-expand { display: none };
+                        option {
+                            font-size: $fs-0_5;
+                        }
+                    
+                }
+                 /** End of select **/
+            }
+             /** End of view selection **/
+         }
+          /** End of container **/
+     }
+    /** End of header **/
+
+     /** Start of notes-wrapper **/
+     .notes-wrapper {
+            margin : $mt2 0rem;
+            /** Start of container **/
+            &.container{
+                padding: $container-padding;
+                @include grid-container(5 , auto , 1.5rem);
+                  /** Start of add note **/
+                  .add-note{
+                    @include flex-center();
+                    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23A80000FF' stroke-width='3' stroke-dasharray='6%2c 9' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");                 
+                    background-color: transparent;
+                    height: 25rem;
+
+                    /** Start of note btn **/
+                    .add-note-btn{
+                        background: $color-red;
+                        padding: $p-2;
+                        border-radius: 100%;
+                        border: $border-none;
+                        outline: none;
+                        box-shadow: $bx-shadow-none;
+    
+                        .fa {
+                            font-size: $fs-2_5;
+                            color: $text-white;
+                        }
+                    }
+                    /** End of note btn **/
+                }
+                  /** End of add note **/
+                /** Start of note **/
+                .note{
+                   
+                    height: 25rem;
+                    /** Start of note-header **/
+                      .note-header{
+                         padding: $p-1;
+                         font-size: $fs-1;
+                          font-family: $light;
+                           
+                          &.darken-background{
+                            filter: brightness(0.90);
+                          }
+                         
+                           /** Start of note-header h2 **/
+                          h2{
+                              @include para-truncate($para-truncate-width);
+                          }
+                           /** End of note-header h2 **/
+                      }
+                      /** End of note-header **/
+
+                      /** Start of note-body **/
+                      .note-body{
+                          padding: $p-1;
+                          height: 270px;
+                          overflow: auto;
+                          /** Start of note-body p **/
+                          p{
+                              font-family: $light;
+                              font-size: $fs-0_9;
+                              word-spacing: 2px;
+                              line-height: 20px;
+                              text-align: justify;
+                             
+                          }
+                        /** End of note-body p **/
+                      }
+                      /** End of note-body **/
+
+                      /** Start of note-footer **/
+                      .note-footer{
+                         @include flex-between();
+                          padding: $p-1;
+                          p{
+                              font-size: $fs-0_6;
+                              font-family: $semi-bold;
+                              text-transform: uppercase;
+                              color: $date-text-color;
+                          }
+                          button {
+                              background-color: transparent;
+                              .fa {
+                                  font-size: $fs-0_9;
+                                  color: $date-text-color;
+                                  font-weight: 500;
+                              }
+                          }
+                      }
+                       /** End of note-footer **/
+                  }
+            }
+            /** Start of layout change class **/
+            &.five-col-layout{
+                @include grid-container(5 , auto , 1.5rem);
+            }
+            &.two-col-layout{
+                @include grid-container(2 , auto , 1.5rem);
+            }
+            /** Start of layout change class **/
+            /** End of container **/
+     }
+     /** End of notes-wrapper **/
+
+     .modal-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.4);
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        /** Start of modal **/
+        .modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            background-color: $color-white;
+            transform: translate(-50%, -50%) scale(0.95);
+            padding: $p-1-5 $p-2;
+            width: 40%;
+
+                /** Start of modal-header **/
+                .modal-header{
+                    text-align: center;
+                    padding: $p-1;
+                    h4 {
+                        font-family: $semi-bold;
+                        font-size: $h4;
+                    }
+                }
+                /** End of modal-header **/
+
+                /** Start of modal-body **/
+                .modal-body {
+                    /** Start of form group **/
+                    .form-group {
+                        margin-bottom: $mb-1;
+                        /** Start of input item **/
+                        .input-item {
+                            display: block;
+                            width: 100%;
+                            border: 1px solid #000;
+                            padding: $p-1-5;
+                            font-size: $fs-1_2;
+                            font-family: $regular;
+                        } 
+                        /** End of input item **/
+                        .error-text{
+                            display: none;
+                            color: $text-error;
+                            font-family: $regular;
+                            font-size: $fs-0_8;
+                            margin-top: $mt0-5;
+
+                            &.show{
+                                display: block;
+                            }
+                        }
+                        /** End of input item **/
+                    } 
+                    /** End of form grouo **/
+                    
+                    /** Start of input group **/
+                    .input-group {
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: $mb-1;
+                        
+                        .bg-options-container{
+                            display: flex;
+                            margin-left: $ml1-5;;
+                        }
+                        /** Start of label **/
+                        label {
+                            font-size: $fs-1_1;
+                            font-family:$regular;
+                        
+                        }  
+                        /** Start of choose-color checkbox **/
+                       .choose-color {
+                        appearance: none;                   
+                        width: 25px;
+                        height: 25px;
+                        display: inline-flex;
+                        margin-right: $mr0-5;
+                        position: relative;
+                        /** Start of choose-color checkbox checkmark **/
+                        &::before {
+                            content: "";
+                            position: absolute;                    
+                            left: 50%;
+                            top: 50%;
+                            width: 13px;
+                            height: 13px;
+                            transform: scale(0);
+                            transform-origin: bottom left;
+                            background-color: #000;
+                            clip-path: polygon(25% 60%, 34% 68%, 81% 2%, 87% 18%, 34% 95%, 0 63%);
+                            }
+                        /** End of choose-color checkbox  checkmark**/
+
+                        /** Start of choose-color active checkbox **/
+                        &.choose-color:checked::before {
+                                transform: scale(1) translate(-50%, -50%);
+                        }
+                        /** End of choose-color active checkbox **/
+
+                          /** End of choose-color checkbox **/
+                        }    
+                    }
+                    .confirm-desc-text{
+                        font-family: $regular;
+                        font-size: $fs-1_2;
+                        margin:$mt1 0rem;
+
+                    }
+                    /** End of confirm delete note **/
+                }
+                /** End of modal-body**/   
+
+                /** Start of modal-footer **/
+                .modal-footer{
+                    @include flex-center();
+                    margin: 0 auto;
+
+                    button{
+                        margin-right: $mr0-75;
+                    }
+                }
+                /** End of modal-footer **/
+        }
+            
+        }
+        /** End of modal **/       
+     }
+    
+
+/** End of wrapper **/
